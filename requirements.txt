@@ -1,0 +1,4 @@
+fonttools==4.67.0
+pillow==13.0.0
+uharfbuzz==0.57.0
+brotli==1.2.1

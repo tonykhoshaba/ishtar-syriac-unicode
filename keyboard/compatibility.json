@@ -1,0 +1,286 @@
+{
+  "baseline_source": "Existing Ramsina QWERTY review-editor layout",
+  "sha256": "9dc1987d60129638e516b06d148efcb2053e4e1f76bd2f89d7a9864e880553cd",
+  "baseline_keys": 119,
+  "changed_existing_keys": [],
+  "added": {
+    "A:KeyH": "ܗ̇",
+    "A:KeyR": "݂",
+    "A:KeyF": "̃"
+  },
+  "font_coverage_gaps": [
+    {
+      "key": "A:Digit0",
+      "text": "܍",
+      "unicode": "U+070D",
+      "origin": "Ramsina editor",
+      "missing": "U+070D"
+    },
+    {
+      "key": "A:Digit1",
+      "text": "܁",
+      "unicode": "U+0701",
+      "origin": "Ramsina editor",
+      "missing": "U+0701"
+    },
+    {
+      "key": "A:Digit2",
+      "text": "܂",
+      "unicode": "U+0702",
+      "origin": "Ramsina editor",
+      "missing": "U+0702"
+    },
+    {
+      "key": "A:Digit3",
+      "text": "܃",
+      "unicode": "U+0703",
+      "origin": "Ramsina editor",
+      "missing": "U+0703"
+    },
+    {
+      "key": "A:Digit4",
+      "text": "܄",
+      "unicode": "U+0704",
+      "origin": "Ramsina editor",
+      "missing": "U+0704"
+    },
+    {
+      "key": "A:Digit5",
+      "text": "܅",
+      "unicode": "U+0705",
+      "origin": "Ramsina editor",
+      "missing": "U+0705"
+    },
+    {
+      "key": "A:Digit6",
+      "text": "܈",
+      "unicode": "U+0708",
+      "origin": "Ramsina editor",
+      "missing": "U+0708"
+    },
+    {
+      "key": "A:Digit7",
+      "text": "܉",
+      "unicode": "U+0709",
+      "origin": "Ramsina editor",
+      "missing": "U+0709"
+    },
+    {
+      "key": "A:Digit8",
+      "text": "܏",
+      "unicode": "U+070F",
+      "origin": "Ramsina editor",
+      "missing": "U+070F"
+    },
+    {
+      "key": ":Digit9",
+      "text": "̤",
+      "unicode": "U+0324",
+      "origin": "Ramsina editor",
+      "missing": "U+0324"
+    },
+    {
+      "key": "A:Digit9",
+      "text": "܌",
+      "unicode": "U+070C",
+      "origin": "Ramsina editor",
+      "missing": "U+070C"
+    },
+    {
+      "key": "S:KeyA",
+      "text": "ܑ",
+      "unicode": "U+0711",
+      "origin": "Ramsina editor",
+      "missing": "U+0711"
+    },
+    {
+      "key": "S:KeyC",
+      "text": "♱",
+      "unicode": "U+2671",
+      "origin": "Ramsina editor",
+      "missing": "U+2671"
+    },
+    {
+      "key": "S:KeyE",
+      "text": "{",
+      "unicode": "U+007B",
+      "origin": "Ramsina editor",
+      "missing": "U+007B"
+    },
+    {
+      "key": "S:KeyH",
+      "text": "ܜ",
+      "unicode": "U+071C",
+      "origin": "Ramsina editor",
+      "missing": "U+071C"
+    },
+    {
+      "key": "AS:KeyH",
+      "text": "◌",
+      "unicode": "U+25CC",
+      "origin": "Ramsina editor",
+      "missing": "U+25CC"
+    },
+    {
+      "key": "A:KeyI",
+      "text": "݃",
+      "unicode": "U+0743",
+      "origin": "Ramsina editor",
+      "missing": "U+0743"
+    },
+    {
+      "key": "S:KeyJ",
+      "text": "܀",
+      "unicode": "U+0700",
+      "origin": "Ramsina editor",
+      "missing": "U+0700"
+    },
+    {
+      "key": "A:KeyK",
+      "text": "݄",
+      "unicode": "U+0744",
+      "origin": "Ramsina editor",
+      "missing": "U+0744"
+    },
+    {
+      "key": "A:KeyL",
+      "text": "݆",
+      "unicode": "U+0746",
+      "origin": "Ramsina editor",
+      "missing": "U+0746"
+    },
+    {
+      "key": "A:KeyO",
+      "text": "݅",
+      "unicode": "U+0745",
+      "origin": "Ramsina editor",
+      "missing": "U+0745"
+    },
+    {
+      "key": "A:KeyP",
+      "text": "̭",
+      "unicode": "U+032D",
+      "origin": "Ramsina editor",
+      "missing": "U+032D"
+    },
+    {
+      "key": "S:KeyQ",
+      "text": "ܔ",
+      "unicode": "U+0714",
+      "origin": "Ramsina editor",
+      "missing": "U+0714"
+    },
+    {
+      "key": "S:KeyS",
+      "text": "܌",
+      "unicode": "U+070C",
+      "origin": "Ramsina editor",
+      "missing": "U+070C"
+    },
+    {
+      "key": "S:KeyV",
+      "text": "܉",
+      "unicode": "U+0709",
+      "origin": "Ramsina editor",
+      "missing": "U+0709"
+    },
+    {
+      "key": "S:KeyW",
+      "text": "}",
+      "unicode": "U+007D",
+      "origin": "Ramsina editor",
+      "missing": "U+007D"
+    },
+    {
+      "key": "S:KeyX",
+      "text": "♰",
+      "unicode": "U+2670",
+      "origin": "Ramsina editor",
+      "missing": "U+2670"
+    },
+    {
+      "key": ":Semicolon",
+      "text": "؛",
+      "unicode": "U+061B",
+      "origin": "Ramsina editor",
+      "missing": "U+061B"
+    },
+    {
+      "key": "A:Equal",
+      "text": "┐",
+      "unicode": "U+2510",
+      "origin": "Ramsina editor",
+      "missing": "U+2510"
+    },
+    {
+      "key": ":Comma",
+      "text": "،",
+      "unicode": "U+060C",
+      "origin": "Ramsina editor",
+      "missing": "U+060C"
+    },
+    {
+      "key": ":Minus",
+      "text": "‐",
+      "unicode": "U+2010",
+      "origin": "Ramsina editor",
+      "missing": "U+2010"
+    },
+    {
+      "key": "S:Minus",
+      "text": "܋",
+      "unicode": "U+070B",
+      "origin": "Ramsina editor",
+      "missing": "U+070B"
+    },
+    {
+      "key": "A:Minus",
+      "text": "┌",
+      "unicode": "U+250C",
+      "origin": "Ramsina editor",
+      "missing": "U+250C"
+    },
+    {
+      "key": "S:Slash",
+      "text": "؟",
+      "unicode": "U+061F",
+      "origin": "Ramsina editor",
+      "missing": "U+061F"
+    },
+    {
+      "key": "A:Backquote",
+      "text": "ّ",
+      "unicode": "U+0651",
+      "origin": "Ramsina editor",
+      "missing": "U+0651"
+    },
+    {
+      "key": "S:BracketLeft",
+      "text": "̄",
+      "unicode": "U+0304",
+      "origin": "Ramsina editor",
+      "missing": "U+0304"
+    },
+    {
+      "key": "A:BracketLeft",
+      "text": "܌",
+      "unicode": "U+070C",
+      "origin": "Ramsina editor",
+      "missing": "U+070C"
+    },
+    {
+      "key": ":BracketRight",
+      "text": "܊",
+      "unicode": "U+070A",
+      "origin": "Ramsina editor",
+      "missing": "U+070A"
+    },
+    {
+      "key": "S:BracketRight",
+      "text": "܍",
+      "unicode": "U+070D",
+      "origin": "Ramsina editor",
+      "missing": "U+070D"
+    }
+  ]
+}

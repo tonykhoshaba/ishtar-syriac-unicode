@@ -1,0 +1,133 @@
+{
+  "status": "private staging; not a public release",
+  "files": {
+    ".gitignore": {
+      "sha256": "f8d6fc5b1fc7ae047e42c6920bfdb6e3773adda4177c12e927be06e9f4d01d5a",
+      "bytes": 36
+    },
+    ".nojekyll": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "LICENSE-PENDING.md": {
+      "sha256": "c42eca091910e909be6382d0914597eb14a4179c1634dcf23539ef4fabaa37a7",
+      "bytes": 1089
+    },
+    "README.md": {
+      "sha256": "16b640417c0a57028f7a002acf3f004ce46c641deb6fd856360cd9079b9b3b42",
+      "bytes": 3007
+    },
+    "docs/INSTALLATION.md": {
+      "sha256": "4c68f98d5ca54bf429cc1c0d68043dc5846b401251b79aa144c053e13dca15a0",
+      "bytes": 2130
+    },
+    "docs/KNOWN-LIMITATIONS.md": {
+      "sha256": "c2f32e36a044c2ccfb6413f9a44a9a7e954bd830732994c64a7ea3ba972d1f04",
+      "bytes": 1808
+    },
+    "docs/PROVENANCE.md": {
+      "sha256": "cfb5756df13157f93ab143890dd7c2d8b4e52479c7d4b00c9b792c98318f26bd",
+      "bytes": 1557
+    },
+    "docs/RELEASE-CHECKLIST.md": {
+      "sha256": "8662b43e0d81f171d22d208f9112c1c8c711a1fc186341519c8e09430285f774",
+      "bytes": 1338
+    },
+    "docs/RELEASE-NOTES-DRAFT.md": {
+      "sha256": "501cd1ae719a47fa38e841e9ab2eff8fbac86d1951311893b3d1ffdb623d1258",
+      "bytes": 744
+    },
+    "index.html": {
+      "sha256": "e1856cb6cf46680fb19e4fd89dee9f505febead661b53e5108cb1b6926051f25",
+      "bytes": 266
+    },
+    "keyboard/README.md": {
+      "sha256": "f55c05c111a359531b520187fc6067f4264f02a21cf6bf539593ace11ea32268",
+      "bytes": 2337
+    },
+    "keyboard/compatibility.json": {
+      "sha256": "581e5a8f8db9b5ddf8320006ca19da88317efc0079ec78f0e9ca5607c8a5e445",
+      "bytes": 5961
+    },
+    "keyboard/index.html": {
+      "sha256": "af2a2def6797ca41120bde0b19ede52767ed5f071464603efabf81e95984e670",
+      "bytes": 4471
+    },
+    "keyboard/ishtar-qwerty.json": {
+      "sha256": "66360c7a1f967217f4c81afef3c2ef93a23e737631acc4afe830ca3a91cbe28e",
+      "bytes": 2322
+    },
+    "keyboard/keyboard.js": {
+      "sha256": "6077082f73ef88f1ed143cff12f12fb8df0d6f2d50f7328855911710dfd0e063",
+      "bytes": 5986
+    },
+    "keyboard/mapping-data.js": {
+      "sha256": "2507e12418894b18181e60dc09dee12d8200151f638258dccd952c8165cd3897",
+      "bytes": 14399
+    },
+    "keyboard/mapping.csv": {
+      "sha256": "6ee0c3c0d12ccedf7ae6fcff1268aeb851aa14b18a068e38925ad2a172671e0d",
+      "bytes": 4633
+    },
+    "keyboard/ramsina-baseline.json": {
+      "sha256": "b618a583de7958507be85e5a4fd30bd92d104023b2fbb64e435f330c4230eb85",
+      "bytes": 2266
+    },
+    "originals/ISHAR_XP.ttf": {
+      "sha256": "d8ed8a85952c329a3d290403d0b646473ab51849682a89a7829839f2ac063143",
+      "bytes": 44132
+    },
+    "output/IshtarSyriacUnicodeAlpha-Regular.ttf": {
+      "sha256": "8b4f67989858e80c85fe6b4322f6e3c86c5083c1ab6f50d8d77ca98cdfa91393",
+      "bytes": 216484
+    },
+    "output/IshtarSyriacUnicodeAlpha-Regular.woff2": {
+      "sha256": "b358a735a1aef32b3be946c09c0bb63e63695da338d7f0c5199616f1bdefe8cd",
+      "bytes": 30224
+    },
+    "output/IshtarSyriacUnicodeAlpha.fea": {
+      "sha256": "77250827485dcc8e9480fbd3d7a4d4212ac8961db650835ce5bbda19ed703555",
+      "bytes": 126526
+    },
+    "output/inspection.json": {
+      "sha256": "b5798fcbf11e89bd22dc1485352221ee056be49178558744838f89a5d7d5aa7a",
+      "bytes": 46842
+    },
+    "output/mapping-provisional.json": {
+      "sha256": "3371f40ed31425ee85967c7248d35a24d9d1c1075d0684f8f417c21b47b4fcb5",
+      "bytes": 2357
+    },
+    "output/shaping-tests.json": {
+      "sha256": "d1c56aee99f77da5c653c374149830c390909a88cb8c95be11be4b6cd3783147",
+      "bytes": 3872
+    },
+    "output/unicode-proof.png": {
+      "sha256": "299882a4cc752cfa2ed28ac162742bb57c54af3fdd331a18d9ac664eeb7d0696",
+      "bytes": 117817
+    },
+    "requirements.txt": {
+      "sha256": "3f3aade40c51eb0b7a34e2f7c72b072dcdd59c9b275d93fd2d86348a6005866b",
+      "bytes": 65
+    },
+    "tools/build_font.py": {
+      "sha256": "3ba866ad45c5ee42c75423f7bdfa5ea6069b59be2cb8df4331c8cc82e2239a07",
+      "bytes": 25945
+    },
+    "tools/build_keyboard.py": {
+      "sha256": "be99d96122c97e5860005e9a11da40a478995cf372e69fce76c31190eed25746",
+      "bytes": 1623
+    },
+    "tools/inspect_font.py": {
+      "sha256": "2d171fa012871e204cd540bd93c0acc78a4207ddbbacb6ddd3737be161c20a15",
+      "bytes": 1830
+    },
+    "tools/verify_font.py": {
+      "sha256": "505067d2b128d04fe3204e5cd10d13b5a7645d1f9e3fab2edbb8134761bff17f",
+      "bytes": 2429
+    },
+    "tools/verify_taw_alaph.py": {
+      "sha256": "c030841aaeb5681df4a472eebc303a64dc9e1448421622a8ef30f38105914743",
+      "bytes": 1048
+    }
+  }
+}

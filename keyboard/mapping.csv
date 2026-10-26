@@ -1,0 +1,123 @@
+key,text,unicode,origin,missing
+:Space, ,U+0020,Ramsina editor,
+:Digit0,̈,U+0308,Ramsina editor,
+S:Digit0,0,U+0030,Ramsina editor,
+A:Digit0,܍,U+070D,Ramsina editor,U+070D
+:Digit1,ܲ,U+0732,Ramsina editor,
+S:Digit1,1,U+0031,Ramsina editor,
+A:Digit1,܁,U+0701,Ramsina editor,U+0701
+:Digit2,ܵ,U+0735,Ramsina editor,
+S:Digit2,2,U+0032,Ramsina editor,
+A:Digit2,܂,U+0702,Ramsina editor,U+0702
+:Digit3,ܸ,U+0738,Ramsina editor,
+S:Digit3,3,U+0033,Ramsina editor,
+A:Digit3,܃,U+0703,Ramsina editor,U+0703
+:Digit4,ܹ,U+0739,Ramsina editor,
+S:Digit4,4,U+0034,Ramsina editor,
+A:Digit4,܄,U+0704,Ramsina editor,U+0704
+:Digit5,ܿ,U+073F,Ramsina editor,
+S:Digit5,5,U+0035,Ramsina editor,
+A:Digit5,܅,U+0705,Ramsina editor,U+0705
+:Digit6,ܼ,U+073C,Ramsina editor,
+S:Digit6,6,U+0036,Ramsina editor,
+A:Digit6,܈,U+0708,Ramsina editor,U+0708
+:Digit7,̇,U+0307,Ramsina editor,
+S:Digit7,7,U+0037,Ramsina editor,
+A:Digit7,܉,U+0709,Ramsina editor,U+0709
+:Digit8,̣,U+0323,Ramsina editor,
+S:Digit8,8,U+0038,Ramsina editor,
+A:Digit8,܏,U+070F,Ramsina editor,U+070F
+:Digit9,̤,U+0324,Ramsina editor,U+0324
+S:Digit9,9,U+0039,Ramsina editor,
+A:Digit9,܌,U+070C,Ramsina editor,U+070C
+:KeyA,ܐ,U+0710,Ramsina editor,
+S:KeyA,ܑ,U+0711,Ramsina editor,U+0711
+:KeyB,ܒ,U+0712,Ramsina editor,
+S:KeyB,ܒ̣,U+0712 U+0323,Ramsina editor,
+A:KeyB,‌,U+200C,Ramsina editor,
+:KeyC,ܨ,U+0728,Ramsina editor,
+S:KeyC,♱,U+2671,Ramsina editor,U+2671
+:KeyD,ܕ,U+0715,Ramsina editor,
+S:KeyD,ܕ݂,U+0715 U+0742,Ramsina editor,
+:KeyE,ܥ,U+0725,Ramsina editor,
+S:KeyE,{,U+007B,Ramsina editor,U+007B
+:KeyF,ܫ,U+072B,Ramsina editor,
+S:KeyF,ܫ̃,U+072B U+0303,Ramsina editor,
+:KeyG,ܓ,U+0713,Ramsina editor,
+S:KeyG,ܓ݂,U+0713 U+0742,Ramsina editor,
+:KeyH,ܗ,U+0717,Ramsina editor,
+S:KeyH,ܜ,U+071C,Ramsina editor,U+071C
+AS:KeyH,◌,U+25CC,Ramsina editor,U+25CC
+:KeyI,ܘܼ,U+0718 U+073C,Ramsina editor,
+S:KeyI,ܪ̈,U+072A U+0308,Ramsina editor,
+A:KeyI,݃,U+0743,Ramsina editor,U+0743
+:KeyJ,ܓ̰,U+0713 U+0330,Ramsina editor,
+S:KeyJ,܀,U+0700,Ramsina editor,U+0700
+A:KeyJ,݈,U+0748,Ramsina editor,
+:KeyK,ܟ,U+071F,Ramsina editor,
+S:KeyK,ܟܼ,U+071F U+073C,Ramsina editor,
+A:KeyK,݄,U+0744,Ramsina editor,U+0744
+AS:KeyK,ܟ̰,U+071F U+0330,Ramsina editor,
+:KeyL,ܠ,U+0720,Ramsina editor,
+S:KeyL,‍,U+200D,Ramsina editor,
+A:KeyL,݆,U+0746,Ramsina editor,U+0746
+:KeyM,ܡ,U+0721,Ramsina editor,
+S:KeyM,ܡ̣,U+0721 U+0323,Ramsina editor,
+A:KeyM,‏,U+200F,Ramsina editor,
+:KeyN,ܢ,U+0722,Ramsina editor,
+S:KeyN,*,U+002A,Ramsina editor,
+:KeyO,ܘܿ,U+0718 U+073F,Ramsina editor,
+S:KeyO,ܘܼ,U+0718 U+073C,Ramsina editor,
+A:KeyO,݅,U+0745,Ramsina editor,U+0745
+:KeyP,ܦ,U+0726,Ramsina editor,
+S:KeyP,ܦ̮,U+0726 U+032E,Ramsina editor,
+A:KeyP,̭,U+032D,Ramsina editor,U+032D
+:KeyQ,ܩ,U+0729,Ramsina editor,
+S:KeyQ,ܔ,U+0714,Ramsina editor,U+0714
+:KeyR,ܪ,U+072A,Ramsina editor,
+S:KeyR,ܪ̈,U+072A U+0308,Ramsina editor,
+:KeyS,ܤ,U+0724,Ramsina editor,
+S:KeyS,܌,U+070C,Ramsina editor,U+070C
+:KeyT,ܬ,U+072C,Ramsina editor,
+S:KeyT,ܬܼ,U+072C U+073C,Ramsina editor,
+:KeyU,ܝܼ,U+071D U+073C,Ramsina editor,
+S:KeyU,ܞ,U+071E,Ramsina editor,
+:KeyV,ܛ,U+071B,Ramsina editor,
+S:KeyV,܉,U+0709,Ramsina editor,U+0709
+:KeyW,ܘ,U+0718,Ramsina editor,
+S:KeyW,},U+007D,Ramsina editor,U+007D
+:KeyX,ܚ,U+071A,Ramsina editor,
+S:KeyX,♰,U+2670,Ramsina editor,U+2670
+:KeyY,ܝ,U+071D,Ramsina editor,
+S:KeyY,,,Ramsina editor,
+:KeyZ,ܙ,U+0719,Ramsina editor,
+S:KeyZ,ܙ̃,U+0719 U+0303,Ramsina editor,
+:Semicolon,؛,U+061B,Ramsina editor,U+061B
+S:Semicolon,:,U+003A,Ramsina editor,
+:Equal,=,U+003D,Ramsina editor,
+S:Equal,+,U+002B,Ramsina editor,
+A:Equal,┐,U+2510,Ramsina editor,U+2510
+:Comma,،,U+060C,Ramsina editor,U+060C
+S:Comma,),U+0029,Ramsina editor,
+:Minus,‐,U+2010,Ramsina editor,U+2010
+S:Minus,܋,U+070B,Ramsina editor,U+070B
+A:Minus,┌,U+250C,Ramsina editor,U+250C
+:Period,.,U+002E,Ramsina editor,
+S:Period,(,U+0028,Ramsina editor,
+:Slash,/,U+002F,Ramsina editor,
+S:Slash,؟,U+061F,Ramsina editor,U+061F
+:Backquote,̰,U+0330,Ramsina editor,
+S:Backquote,!,U+0021,Ramsina editor,
+A:Backquote,ّ,U+0651,Ramsina editor,U+0651
+:BracketLeft,̱,U+0331,Ramsina editor,
+S:BracketLeft,̄,U+0304,Ramsina editor,U+0304
+A:BracketLeft,܌,U+070C,Ramsina editor,U+070C
+:Backslash,݇,U+0747,Ramsina editor,
+S:Backslash,ـ,U+0640,Ramsina editor,
+:BracketRight,܊,U+070A,Ramsina editor,U+070A
+S:BracketRight,܍,U+070D,Ramsina editor,U+070D
+:Quote,',U+0027,Ramsina editor,
+S:Quote,"""",U+0022,Ramsina editor,
+A:KeyH,ܗ̇,U+0717 U+0307,added,
+A:KeyR,݂,U+0742,added,
+A:KeyF,̃,U+0303,added,

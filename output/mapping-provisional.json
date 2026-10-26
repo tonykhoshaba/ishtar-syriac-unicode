@@ -1,0 +1,112 @@
+{
+  "0x710": {
+    "base": "a",
+    "connected": "a",
+    "status": "provisional visual identification"
+  },
+  "0x712": {
+    "base": "B",
+    "connected": "b",
+    "status": "provisional visual identification"
+  },
+  "0x713": {
+    "base": "W",
+    "connected": "g",
+    "status": "provisional visual identification"
+  },
+  "0x715": {
+    "base": "d",
+    "connected": "d",
+    "status": "provisional visual identification"
+  },
+  "0x717": {
+    "base": "h",
+    "connected": "h",
+    "status": "provisional visual identification"
+  },
+  "0x718": {
+    "base": "w",
+    "connected": "w",
+    "status": "provisional visual identification"
+  },
+  "0x719": {
+    "base": "z",
+    "connected": "z",
+    "status": "provisional visual identification"
+  },
+  "0x71a": {
+    "base": "X",
+    "connected": "x",
+    "status": "provisional visual identification"
+  },
+  "0x71b": {
+    "base": "f",
+    "connected": "f",
+    "status": "provisional visual identification"
+  },
+  "0x71d": {
+    "base": "Y",
+    "connected": "y",
+    "status": "provisional visual identification"
+  },
+  "0x71f": {
+    "base": "K",
+    "connected": "k",
+    "status": "provisional visual identification"
+  },
+  "0x720": {
+    "base": "l",
+    "connected": "l",
+    "status": "provisional visual identification"
+  },
+  "0x721": {
+    "base": "M",
+    "connected": "m",
+    "status": "provisional visual identification"
+  },
+  "0x722": {
+    "base": "N",
+    "connected": "n",
+    "status": "provisional visual identification"
+  },
+  "0x724": {
+    "base": "Z",
+    "connected": "s",
+    "status": "provisional visual identification"
+  },
+  "0x725": {
+    "base": "AE",
+    "connected": "v",
+    "status": "provisional visual identification"
+  },
+  "0x726": {
+    "base": "I",
+    "connected": "p",
+    "status": "provisional visual identification"
+  },
+  "0x728": {
+    "base": "c",
+    "connected": "c",
+    "status": "provisional visual identification"
+  },
+  "0x729": {
+    "base": "Q",
+    "connected": "q",
+    "status": "provisional visual identification"
+  },
+  "0x72a": {
+    "base": "r",
+    "connected": "r",
+    "status": "provisional visual identification"
+  },
+  "0x72b": {
+    "base": "T",
+    "connected": "j",
+    "status": "provisional visual identification"
+  },
+  "0x72c": {
+    "base": "t",
+    "connected": "t",
+    "status": "provisional visual identification"
+  }
+}
