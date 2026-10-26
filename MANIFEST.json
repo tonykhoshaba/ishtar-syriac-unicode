@@ -21,6 +21,10 @@
       "sha256": "aca0847274eb72f6af734f2d3a0857031be585f706120f81df3cb07885e3ed7d",
       "bytes": 4267
     },
+    "docs/GOOGLE-FONTS-PLAN.md": {
+      "sha256": "bf324126c3169332f510ab7b91436209c562b470af01f2692060500431a42322",
+      "bytes": 2007
+    },
     "docs/INSTALLATION.md": {
       "sha256": "0e2fcb8ef9dbc640ca2c08caa9df08dc26559a9bcac199378d5aeb155d9c4fd8",
       "bytes": 2619
@@ -46,8 +50,8 @@
       "bytes": 2569
     },
     "docs/RELEASE-CHECKLIST.md": {
-      "sha256": "336b0bef0f9b33d67a746a139e1994ae22a8c4b3c8153d2d9ac1e9a74c7f5207",
-      "bytes": 1700
+      "sha256": "fa4b855c04a5cc4a97ea4d3e9e42cd187fc4f9a15038f863984213845bd1335e",
+      "bytes": 2143
     },
     "docs/RELEASE-NOTES-DRAFT.md": {
       "sha256": "79a61f553b329de161e24d27144e87634cd8627feb81ea67a51bd0f32fb53844",

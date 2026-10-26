@@ -24,3 +24,7 @@
 - [ ] Approve the finished public release, repository visibility and any website deployment.
 
 The font remains a review build. Public publication is a separate release action; this checklist does not itself change repository visibility or announce version 1.0.
+
+## After the stable release — Google Fonts / Google Docs
+
+- [ ] Prepare and request Ishtar's inclusion in Google Fonts, and explicitly request Google Docs/Workspace availability. Audit Google's current coverage, source/build and QA requirements first; search for duplicate proposals before submitting. Acceptance is not guaranteed. See [GOOGLE-FONTS-PLAN.md](GOOGLE-FONTS-PLAN.md). **Requested by Tony; recorded for later, not submitted.**
