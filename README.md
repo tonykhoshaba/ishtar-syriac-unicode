@@ -1,6 +1,6 @@
 # Ishtar Syriac Unicode
 
-A Unicode Eastern Syriac font based on Tony Khoshaba’s Ishtar XP, developed with the help of Yoab Benjamin. This project preserves the original letter designs while adding Unicode character mapping, contextual forms, mark positioning and OpenType ligatures.
+A Unicode Eastern Syriac font based on Tony Khoshaba’s Ishtar XP, developed with the help of the late Rabi Yoab Benjamin. This project preserves the original letter designs while adding Unicode character mapping, contextual forms, mark positioning and OpenType ligatures.
 
 **Font software: SIL Open Font License 1.1. Licensing is closed as a release blocker.** The project is currently a font/keyboard review build. See [OFL.txt](OFL.txt), [NOTICE.md](NOTICE.md) and [the documented release basis](docs/LICENSING.md).
 
@@ -48,7 +48,7 @@ The build uses the original Ishtar XP font as its input. The original is not aut
 
 ## Credits and license
 
-The project adopts SIL OFL 1.1 using the published Sparksoft Systems Marcus-font release and Sargon Hasso's clarification, accepted by Tony Khoshaba. Credit Esho Marcus, Sargon Hasso and Sparksoft Systems for the source work, and Tony Khoshaba with Yoab Benjamin for Ishtar's modifications and review. Preserve the notices and do not use the reserved derivative family names Marcus or Nohadra. See `NOTICE.md`, `docs/PROVENANCE.md` and `docs/LICENSING.md`.
+The project adopts SIL OFL 1.1 using the published Sparksoft Systems Marcus-font release and Sargon Hasso's clarification, accepted by Tony Khoshaba. Credit Esho Marcus, Sargon Hasso and Sparksoft Systems for the source work, and Tony Khoshaba with the late Rabi Yoab Benjamin for Ishtar's modifications and review. Preserve the notices and do not use the reserved derivative family names Marcus or Nohadra. See `NOTICE.md`, `docs/PROVENANCE.md` and `docs/LICENSING.md`.
 
 ## Current focus: debugging
 

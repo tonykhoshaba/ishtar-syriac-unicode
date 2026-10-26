@@ -10,16 +10,16 @@
       "bytes": 0
     },
     "NOTICE.md": {
-      "sha256": "652ece06f0918a37edd16262ffbe4f27835521b54384997e92d24f39e8aedbba",
-      "bytes": 1201
+      "sha256": "145cf11de61ce7498b61cb211c9789fdb78c95438fe401612863408f68ada837",
+      "bytes": 1538
     },
     "OFL.txt": {
       "sha256": "bf11d1b03482d1d53d82e9fa3384ac4c3f423445248b32eca4daef7a2de75dde",
       "bytes": 4507
     },
     "README.md": {
-      "sha256": "785955ad686cc6915a135a6733a929e905b808b60ce6299907a6a5864cb03afb",
-      "bytes": 4239
+      "sha256": "aca0847274eb72f6af734f2d3a0857031be585f706120f81df3cb07885e3ed7d",
+      "bytes": 4267
     },
     "docs/INSTALLATION.md": {
       "sha256": "0e2fcb8ef9dbc640ca2c08caa9df08dc26559a9bcac199378d5aeb155d9c4fd8",
@@ -42,16 +42,16 @@
       "bytes": 11290
     },
     "docs/PROVENANCE.md": {
-      "sha256": "e62d7a05ba0e618c7fe7fbb6a0d03c25bc47a7840df6a54954a98f2841a93bda",
-      "bytes": 2180
+      "sha256": "cb3a8fefe8e9bf44bfb19f2abcb1f08bb9cc7e26cf1f1b3f9a0910b02cb33eb3",
+      "bytes": 2569
     },
     "docs/RELEASE-CHECKLIST.md": {
       "sha256": "336b0bef0f9b33d67a746a139e1994ae22a8c4b3c8153d2d9ac1e9a74c7f5207",
       "bytes": 1700
     },
     "docs/RELEASE-NOTES-DRAFT.md": {
-      "sha256": "fcb0e4a72af2ea8e6b75640c8dc02f29a2c658d29163f6d693dc4a1a0607f84b",
-      "bytes": 931
+      "sha256": "79a61f553b329de161e24d27144e87634cd8627feb81ea67a51bd0f32fb53844",
+      "bytes": 945
     },
     "docs/upstream/Marcus-FONTLOG.txt": {
       "sha256": "0f8737981d639bfad9d62bc970eaf46cdca4940dd252f02a063ac137f7b01f5a",
@@ -114,8 +114,8 @@
       "bytes": 54835
     },
     "keyman/build/ishtar_syrc.kmp": {
-      "sha256": "c5f63fe28f863dff9add98dea262ea249a84f561427d9e9e11dc292b3d8661e6",
-      "bytes": 148899
+      "sha256": "2685e5bbbc6ae138e90fda45e73e00df208e29807d897b585f7de6d43dba2783",
+      "bytes": 149056
     },
     "keyman/build/ishtar_syrc.kmx": {
       "sha256": "c354d168e92146e026ebbc936a5aa3f4cebe75a63b9e64092ee40cc792f7aabc",
@@ -138,8 +138,8 @@
       "bytes": 948668
     },
     "keyman/source/NOTICE.md": {
-      "sha256": "652ece06f0918a37edd16262ffbe4f27835521b54384997e92d24f39e8aedbba",
-      "bytes": 1201
+      "sha256": "145cf11de61ce7498b61cb211c9789fdb78c95438fe401612863408f68ada837",
+      "bytes": 1538
     },
     "keyman/source/OFL.txt": {
       "sha256": "bf11d1b03482d1d53d82e9fa3384ac4c3f423445248b32eca4daef7a2de75dde",
@@ -178,8 +178,8 @@
       "bytes": 948668
     },
     "output/IshtarSyriacUnicodeAlpha-Regular.woff2": {
-      "sha256": "5e7e620396b83d3b5b817d824e77c2a90ad7efa0eeb68e8a80bd8139e37a77cd",
-      "bytes": 61180
+      "sha256": "0e104f0fa8eedfd3fc409684d0c2efbd9ca4a5f089095b8117337a2eb0667f82",
+      "bytes": 60632
     },
     "output/IshtarSyriacUnicodeAlpha.fea": {
       "sha256": "874bccbff265ee652c7326465e6b400c2b5f445e6a5c427b60c1553d5fbdc5d7",
