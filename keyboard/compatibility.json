@@ -220,13 +220,6 @@
       "missing": "U+060C"
     },
     {
-      "key": ":Minus",
-      "text": "‐",
-      "unicode": "U+2010",
-      "origin": "Ramsina editor",
-      "missing": "U+2010"
-    },
-    {
       "key": "S:Minus",
       "text": "܋",
       "unicode": "U+070B",

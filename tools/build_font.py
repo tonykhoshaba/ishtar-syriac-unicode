@@ -2,6 +2,7 @@
 from pathlib import Path
 from copy import deepcopy
 import json
+from itertools import permutations
 from fontTools.ttLib import TTFont,newTable
 from fontTools.ttLib.tables._c_m_a_p import CmapSubtable
 from fontTools.pens.ttGlyphPen import TTGlyphPen
@@ -31,6 +32,9 @@ copy('alaph.after.lamadh','C')
 for cp in list(range(0x20,0x40))+[0x5b,0x5d]:
  g=f.getBestCmap().get(cp)
  if g:cmap[cp]=g
+# Both Unicode semkath characters use this Eastern design.
+cmap[0x0723]=cmap[0x0724]
+cmap[0x2010]=cmap[0x002D]
 # Default-ignorable controls: no outline, no advance.
 pen=TTGlyphPen(None);blank=pen.glyph();f['glyf']['control']=blank;f['hmtx']['control']=(0,0);old.append('control')
 for cp in [0x200c,0x200d,0x200e,0x200f,0x061c]:cmap[cp]='control'
@@ -193,9 +197,14 @@ for base in list(forms):
  for b in [base]+list(forms[base].values()):
   if b not in f['glyf']:continue
   bg=f['glyf'][b];bg.recalcBounds(f['glyf']);cx=(bg.xMin+bg.xMax)//2;top=max(650,bg.yMax)+75
-  combos=[('uni0732','uni0308'),('uni0735','uni0308'),('uni0308','uni0303'),('uni0308','uni0303','uni0735')]
+  combos=[('uni0732','uni0308'),('uni0735','uni0308'),('uni0308','uni0303'),('uni0308','uni0303','uni0735'),('uni0738','uni0308'),('uni0739','uni0308'),('uni0747','uni0308'),('uni0748','uni0308')]
+  # Explicit below-mark combinations: retain approved single positions, then
+  # move a second below vowel far enough down to leave a visible gap.
+  for lower in ['uni0742','uni0330']:
+   for vowel in ['uni0732','uni0735','uni0738','uni0739']:
+    combos += [(lower,vowel),(lower,vowel,'uni0308')]
   for seq in combos:
-   n='stack.'+b+'.'+'.'.join(seq);pen=TTGlyphPen(f.getGlyphSet());f.getGlyphSet()['rish.dotless' if base=='uni072A' else b].draw(pen)
+   n='stack.'+b+'.'+'.'.join(seq);pen=TTGlyphPen(f.getGlyphSet());f.getGlyphSet()['rish.dotless' if base=='uni072A' and 'uni0308' in seq else b].draw(pen)
    def drawmark(src,x,y):
     g=f['glyf'][src];g.recalcBounds(f['glyf']);f.getGlyphSet()[src].draw(TransformPen(pen,(1,0,0,1,x-(g.xMin+g.xMax)/2,y)))
    sy=705 if base=='uni072A' else top
@@ -203,21 +212,46 @@ for base in list(forms):
    if base=='uni0728':sy-=100
    if 'uni0303' in seq:
     drawmark('uni0303',cx,top);sy=top+f['glyf']['uni0303'].yMax+90
-   drawmark('uni0308',cx,sy)
-   vowel_y=sy+f['glyf']['uni0308'].yMax+90
+   if 'uni0308' in seq:drawmark('uni0308',cx,sy)
+   vowel_y=sy+f['glyf']['uni0308'].yMax+90 if 'uni0308' in seq else top
    if base in ['uni071A','uni071D','uni0728']:vowel_y-=40
    if 'uni0735' in seq:drawmark('uni0735',cx,vowel_y)
+   if 'uni0747' in seq:
+    # Candidate silencer above Seyame; subject to visual review.
+    drawmark('uni0747',cx,vowel_y)
+   if 'uni0748' in seq:drawmark('uni0748',cx,min(0,bg.yMin)-65)
+   lower_floor=min(0,bg.yMin)-65
+   for lower in ['uni0742','uni0330']:
+    if lower not in seq:continue
+    src=lower
+    if lower=='uni0742':
+     for name,source,dx,dy,targets in single_dot_rules:
+      if source==lower and b in targets:src=name
+    else:
+     for name,dx,dy,targets in majliyana_rules:
+      if b in targets:src=name
+    drawmark(src,cx,lower_floor)
+    lower_floor = min(lower_floor,lower_floor+f['glyf'][src].yMin)-90
+   for vowel,prefix in [('uni0738','horizontal'),('uni0739','angular')]:
+    if vowel not in seq:continue
+    src='zlameh.'+prefix+'.lowered'
+    if base=='uni0713':src='zlameh.'+prefix+'.gamal'+('.attached' if vowel=='uni0738' and b.endswith(('.medi','.fina')) else '')
+    if base=='uni072B':src='zlameh.'+prefix+'.teth'
+    drawmark(src,cx,lower_floor)
+
    if 'uni0732' in seq:
     src='pthaha.'+b if 'pthaha.'+b in f['glyf'] else 'uni0732'
     g=f['glyf'][src];cut=g.endPtsOfContours[0]+1
     # Split original/source dot outlines at their midpoint by vertical position.
     temp=deepcopy(g);ys=[y for x,y in temp.coordinates];mid=(min(ys)+max(ys))/2
     upperys=[y for x,y in temp.coordinates if y>mid];delta=vowel_y-min(upperys)
+    bottom_shift=min(0,lower_floor-90-max(y for x,y in temp.coordinates if y<=mid)) if any(m in seq for m in ['uni0742','uni0330']) else 0
     for j,(x,y) in enumerate(temp.coordinates):
-     temp.coordinates[j]=(x,y+delta if y>mid else y)
+     temp.coordinates[j]=(x,y+delta if y>mid else y+bottom_shift)
     tmp='temp.stack.pthaha';f['glyf'][tmp]=temp;f['hmtx'][tmp]=(0,temp.xMin)
     drawmark(tmp,cx,0)
-   f['glyf'][n]=pen.glyph();f['glyf'][n].recalcBounds(f['glyf']);f['hmtx'][n]=(f['hmtx'][b][0],f['glyf'][n].xMin);old.append(n);stack_bases.append(n);stack_rules.append('sub '+b+' '+' '.join(seq)+' by '+n+';')
+   f['glyf'][n]=pen.glyph();f['glyf'][n].recalcBounds(f['glyf']);f['hmtx'][n]=(f['hmtx'][b][0],f['glyf'][n].xMin);old.append(n);stack_bases.append(n);
+   for order in sorted(set(permutations(seq))):stack_rules.append((len(order),'sub '+b+' '+' '.join(order)+' by '+n+';'))
 old=list(dict.fromkeys(old));f.setGlyphOrder(old);f['maxp'].numGlyphs=len(old)
 # Expert-confirmed identities: legacy j/T is shin; legacy f is teth.
 cmap[0x71b],cmap[0x72b]=cmap[0x72b],cmap[0x71b]
@@ -232,14 +266,15 @@ f['OS/2'].sTypoAscender=1500;f['OS/2'].sTypoDescender=-1000;f['OS/2'].sTypoLineG
 for id,value in {1:'Ishtar Syriac Unicode Alpha',2:'Regular',3:'IshtarSyriacUnicodeAlpha-0.001',4:'Ishtar Syriac Unicode Alpha',5:'Version 0.001; review prototype',6:'IshtarSyriacUnicodeAlpha-Regular',10:'Experimental Unicode conversion of Tony Khoshaba’s Ishtar XP. Original provenance preserved. Not a production release.'}.items():
  f['name'].removeNames(nameID=id)
  for platform,enc,lang in [(3,1,0x409),(1,0,0)]:f['name'].setName(value,id,platform,enc,lang)
-fea=['languagesystem DFLT dflt;','languagesystem syrc dflt;','languagesystem syrc SYR;',"feature ccmp { sub uni072A uni0308 by rish.seyame; } ccmp;"]
+fea=['languagesystem DFLT dflt;','languagesystem syrc dflt;','languagesystem syrc SYR;',"feature ccmp { } ccmp;"]
 for tag in ['init','medi','fina','fin2','fin3','med2']:
  rules=[f'sub {base} by {v[tag]};' for base,v in forms.items() if tag in v]
  if rules:fea.append(f'feature {tag} {{ '+ ' '.join(rules)+f' }} {tag};')
 # Syriac Taw is right-joining: fina means attached to its predecessor.
 # Final Alaph forms limit this rule to the word-final pair; marks are ignored.
 fea.append('feature calt { lookupflag IgnoreMarks; sub uni072C.fina uni0710.fin2 by taw.alaph.alt1; sub uni072C.fina uni0710.fina by taw.alaph.alt1; sub uni072C uni0710.fin2 by taw.alaph.alt2; sub uni072C uni0710.fina by taw.alaph.alt2; } calt;')
-fea.append('feature calt { '+' '.join(stack_rules)+' } calt;')
+fea.append('feature calt { '+' '.join(rule for length,rule in sorted(stack_rules,key=lambda r:-r[0]))+' } calt;')
+fea.append('feature calt { sub uni072A uni0308 by rish.seyame; sub uni072A.fina uni0308 by rish.seyame; } calt;')
 fea.append('feature dlig { sub uni0728 uni0722 by sadhe.nun.liga; sub uni0728.init uni0722.fina by sadhe.nun.liga; sub uni0728.medi uni0722.fina by sadhe.nun.liga; } dlig;')
 fea.append('feature calt { sub uni0726.init uni032E by pe.fe.connected; sub uni0726.medi uni032E by pe.fe.connected; sub uni0726.fina uni032E by pe.fe.legacy; sub uni0726 uni032E by pe.fe.legacy; } calt;')
 fea.append("feature ss01 { lookupflag IgnoreMarks; sub taw.alaph.alt2 by taw.alaph.alt1; sub uni072C uni0710 by taw.alaph.alt1; sub uni072C uni0710.fin2 by taw.alaph.alt1; sub uni072C uni0710.fina by taw.alaph.alt1; lookupflag 0; sub taw.alaph.alt1 [uni0308 seyame.taw.alaph seyame.taw.alaph.alt2]' by seyame.taw.alaph; sub taw.alaph.alt1 [uni0735 zqapha.taw.alaph zqapha.taw.alaph.alt2]' by zqapha.taw.alaph; sub taw.alaph.alt1 [uni0732 pthaha.taw.alaph pthaha.taw.alaph.alt2]' by pthaha.taw.alaph; } ss01;")

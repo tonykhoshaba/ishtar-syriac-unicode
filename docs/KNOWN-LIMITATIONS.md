@@ -12,3 +12,7 @@
 - Original-outline and keyboard provenance/licenses remain unresolved. Public distribution is blocked until resolved.
 
 Version 1 will focus on practical coverage and reliable typing. Real text from a Kokhva issue will guide later refinement rather than hypothetical per-letter mark combinations.
+
+## 2026-10-26 update
+
+The package now includes Keyman desktop/mobile files and phone/tablet layouts. Real-device testing is still pending. Font coverage gaps now affect 38 mappings; U+2010 and U+0723 have been added from existing Ishtar outlines. Five new mixed-mark review sheets are prepared, including connected Gamal/Kaph forms; their visual approval is pending. Twenty-five Seyame entry-order tests pass, and all 264 approved single-mark render comparisons remain unchanged. A complete 12-page Kokhva Ishtar comparison was rendered locally with unchanged transcription.

@@ -25,13 +25,13 @@ python3 -m http.server 8877 --bind 127.0.0.1
 
 Keep the system keyboard set to English (US) and use the page’s QWERTY input. Physical keys and clickable Normal, Shift and AltGr layers are supported. The layout preserves 119 assignments from the existing Ramsina review editors, with three additions in unused positions. See `keyboard/README.md` and `keyboard/mapping.csv`.
 
-The browser keyboard is a prototype. It is not an operating-system keyboard installer, and mobile touch layouts are not yet packaged.
+An installable private test package is now available at `keyman/build/ishtar_syrc.kmp`, with desktop files and phone/tablet touch layouts for Keyman on Windows, macOS, Linux, Android and iPhone/iPad. See `keyman/PLATFORMS.md`. All 122 compiled outputs match the mapping. Real-device installation and app testing remain pending. The browser prototype is still available alongside it.
 
 ## Typography
 
 The font includes the 22 core letters, reviewed positional forms, vowels, Seyame, Rukakha, Majliyana, the silence stroke, dotted He and optional ligatures. Word-final Taw–Alap automatically follows the joining rule illustrated on page 4 of Yoab’s lectures. OpenType settings allow separate letters and alternate ligature designs.
 
-Some combined marks have provisional placement. Real-text testing on a Kokhva issue is planned to guide version 2. See `docs/KNOWN-LIMITATIONS.md`.
+Some combined marks have provisional placement. A complete 12-page Kokhva comparison edition has been generated locally with unchanged reviewed text. New Talqana/Seyame and below-mark review sheets are available at `keyboard/refinement-review.html`; their placement still needs visual approval. All 264 single-mark render comparisons remain unchanged. See `docs/KNOWN-LIMITATIONS.md`.
 
 ## Development
 

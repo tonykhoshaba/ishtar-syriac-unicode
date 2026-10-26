@@ -22,3 +22,7 @@ Type Taw then Alap. The font chooses the attached or detached design at word end
 ## Sharing
 
 Recipients of Unicode text may see another Syriac font if their app does not use Ishtar. Use a properly generated PDF with embedded fonts when preserving appearance matters and the final font license permits embedding. The keyboard demo’s text export is plain text; its saved local preview formatting is not embedded in that export.
+
+## 2026-10-26 update: installable keyboard package
+
+The earlier browser-only status is superseded: `keyman/build/ishtar_syrc.kmp` now contains desktop files and phone/tablet touch layouts. See `keyman/PLATFORMS.md` for Windows, macOS, Linux, Android and iPhone/iPad installation. All 122 compiled key outputs are verified; installation and application testing on actual devices remains pending. Mobile font availability remains limited to Keyman and applications supporting custom fonts.
