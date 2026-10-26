@@ -1,17 +1,13 @@
 # Provenance and credits
 
-Tony Khoshaba identifies Ishtar XP as a font he developed with help from Yoab Benjamin. Tony has reviewed the Unicode conversion’s glyph identities, letter forms and mark placement.
+**Current status:** licensing is closed as a release blocker under the project's adopted SIL OFL 1.1 basis. See [LICENSING.md](LICENSING.md), the root `OFL.txt` and `NOTICE.md`.
 
-The Unicode conversion reuses the supplied Ishtar XP outlines and adds shaping/positioning rules and build tools. Ramsina’s outlines have not been copied into the font. The keyboard baseline comes from the existing QWERTY layout used in the project’s Ramsina review editors; its source hash and unchanged assignments are recorded in `keyboard/compatibility.json`.
+Tony Khoshaba developed Ishtar XP with guidance from Yoab Benjamin, modifying letter forms and adjusting vowels. Tony reviewed the positional forms, mark placement and ligature behavior of this Unicode conversion. The original file credits his modifications on March 15, 1998 and June 20, 1999. It retains older `NSC:Nisibus`/`Nisibus` identifiers and version `1.0 6-25-97`.
 
-The original font’s name ID 0 reads:
+In October 2026 Tony supplied Sargon Hasso's direct clarification and link to [Sparksoft Systems' Syriac-Fonts](https://github.com/SparksoftSystems/Syriac-Fonts). That repository supplies Marcus font families under OFL 1.1, records a January 2025 reassignment/OFL re-release, and credits Esho Marcus and Sargon Hasso. The source license and font log are preserved in `docs/upstream/`. The project owner accepted this release basis and directed the project to proceed with debugging.
 
-> Basic English-Assyrian Dictionary Fonts -- Modified by Tony Khoshaba, 3/15/98 -- Final Assyrian Edit Component 6/20/99
+The original Ishtar file differs from the later Unicode Marcus release in glyph inventory, outlines and units per em. A visual comparison finds East Syriac Marcus the closest family; these comparisons are supporting evidence, not a complete reconstruction of every legacy outline. The research record remains in `PROVENANCE-RESEARCH.md`. Earlier statements that the project had located no upstream license are superseded by the Sparksoft finding and owner decision.
 
-Its older unique/PostScript identifiers include `NSC:Nisibus` and `Nisibus`. Its version string is `1.0 6-25-97`. These are historical metadata, not a concluded authorship or license determination.
+Ishtar's Unicode conversion reuses Tony's supplied legacy outlines and adds mapping, joining, mark positioning and shaping rules. Ramsina outlines were not copied. The keyboard preserves the 119-key baseline from Tony's existing Ramsina review editors, with three reviewed additions. See `keyboard/compatibility.json`.
 
-Before public release, confirm the history of these identifiers, the original outlines and the keyboard baseline. Obtain and preserve any necessary permissions. A public license remains pending.
-
-## Owner’s recollection (2026-10-25)
-
-Tony does not remember where the starting font file came from. Yoab instructed him to make changes, and Tony also adjusted the vowel placement. This confirms later modification work but does not establish ownership or redistribution permission for the starting outlines. Public font/source distribution remains pending a provenance investigation or a documented permission basis.
+Kiraz's [Forty Years of Syriac Computing](https://hugoye.bethmardutho.org/article/hv10n1kiraz.html) independently documents Tony's Ishtar Web work in 1998 and Dr. Isho Marcus's involvement in East Syriac fonts. Sargon reports that Dr. Marcus is alive; the earlier suggestion of his death was unverified and has been superseded.

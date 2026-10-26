@@ -1,5 +1,5 @@
 {
-  "status": "private staging; not a public release",
+  "status": "OFL licensed review build; licensing closed as project blocker; public release not yet made",
   "files": {
     ".gitignore": {
       "sha256": "f8d6fc5b1fc7ae047e42c6920bfdb6e3773adda4177c12e927be06e9f4d01d5a",
@@ -9,49 +9,65 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0
     },
-    "LICENSE-PENDING.md": {
-      "sha256": "c42eca091910e909be6382d0914597eb14a4179c1634dcf23539ef4fabaa37a7",
-      "bytes": 1089
+    "NOTICE.md": {
+      "sha256": "652ece06f0918a37edd16262ffbe4f27835521b54384997e92d24f39e8aedbba",
+      "bytes": 1201
+    },
+    "OFL.txt": {
+      "sha256": "bf11d1b03482d1d53d82e9fa3384ac4c3f423445248b32eca4daef7a2de75dde",
+      "bytes": 4507
     },
     "README.md": {
-      "sha256": "97463b9c36189751ae0197f76716acc9b3a719d6ea14b5cfc074a6f225619de6",
-      "bytes": 3493
+      "sha256": "785955ad686cc6915a135a6733a929e905b808b60ce6299907a6a5864cb03afb",
+      "bytes": 4239
     },
     "docs/INSTALLATION.md": {
       "sha256": "0e2fcb8ef9dbc640ca2c08caa9df08dc26559a9bcac199378d5aeb155d9c4fd8",
       "bytes": 2619
     },
     "docs/KNOWN-LIMITATIONS.md": {
-      "sha256": "8981d2c6ba7694760f8647053fbd88f218740abb9a7bc853bf28c505a5ffbf64",
-      "bytes": 2384
+      "sha256": "0fb5c3fa20fe63f92171fff227e71c17098018e15e5a90c21c65e7059eeb381e",
+      "bytes": 1592
+    },
+    "docs/LICENSING.md": {
+      "sha256": "5541b152dd179f016debc672ad7f94daae1d19982290cc9b51c07d5e10c0e65f",
+      "bytes": 2741
     },
     "docs/PROVENANCE-INQUIRY-DRAFT.md": {
-      "sha256": "82fb88300fe72d3be14137b0702a342b35b4d87469945d57649a316623ac5b6d",
-      "bytes": 1530
+      "sha256": "4ec2b7757591eb54d604abc9ca05a8481352c972a9e818cc8ff524bdbc88cce7",
+      "bytes": 1688
     },
     "docs/PROVENANCE-RESEARCH.md": {
-      "sha256": "d48e086428cdfe32880f8b0497deed76fa4ff135b6972a5f0e47b8a49dc3e826",
-      "bytes": 3862
+      "sha256": "a6d4ea8aea9f1baf1cc4381f99be3d0fa12840df953f0486e3ca9461c2c1f09f",
+      "bytes": 11290
     },
     "docs/PROVENANCE.md": {
-      "sha256": "cfb5756df13157f93ab143890dd7c2d8b4e52479c7d4b00c9b792c98318f26bd",
-      "bytes": 1557
+      "sha256": "e62d7a05ba0e618c7fe7fbb6a0d03c25bc47a7840df6a54954a98f2841a93bda",
+      "bytes": 2180
     },
     "docs/RELEASE-CHECKLIST.md": {
-      "sha256": "e8dcff1fd9a3d50504a4d0559162964c35e18cff7ac837260e063a7c6b894355",
-      "bytes": 1878
+      "sha256": "336b0bef0f9b33d67a746a139e1994ae22a8c4b3c8153d2d9ac1e9a74c7f5207",
+      "bytes": 1700
     },
     "docs/RELEASE-NOTES-DRAFT.md": {
-      "sha256": "501cd1ae719a47fa38e841e9ab2eff8fbac86d1951311893b3d1ffdb623d1258",
-      "bytes": 744
+      "sha256": "fcb0e4a72af2ea8e6b75640c8dc02f29a2c658d29163f6d693dc4a1a0607f84b",
+      "bytes": 931
+    },
+    "docs/upstream/Marcus-FONTLOG.txt": {
+      "sha256": "0f8737981d639bfad9d62bc970eaf46cdca4940dd252f02a063ac137f7b01f5a",
+      "bytes": 2522
+    },
+    "docs/upstream/Marcus-OFL.txt": {
+      "sha256": "1d09fc946438ea0f3c488f825641d5d6b174617e8326e200ee4eac01b60433d3",
+      "bytes": 4421
     },
     "index.html": {
-      "sha256": "e1856cb6cf46680fb19e4fd89dee9f505febead661b53e5108cb1b6926051f25",
-      "bytes": 266
+      "sha256": "c4566cc63deeebae8389b116a246deb47355b428976b8621e73e764c3cd04773",
+      "bytes": 282
     },
     "keyboard/README.md": {
-      "sha256": "f55c05c111a359531b520187fc6067f4264f02a21cf6bf539593ace11ea32268",
-      "bytes": 2337
+      "sha256": "f9c9b7b0910622455a5edb3d3f022365e19ee2acb8e365eaf44e60277aa24735",
+      "bytes": 2333
     },
     "keyboard/compatibility.json": {
       "sha256": "ab1ebf30a8328197c70133f293372bfb2087cb02d50d9307a3aee1760c7df485",
@@ -70,7 +86,7 @@
       "bytes": 5986
     },
     "keyboard/keyman-preview.html": {
-      "sha256": "cb4a122d02c30e8173861681bb3bccc84a1d16fd83c6b5890d7c998b6be54622",
+      "sha256": "d04ff2b84c37cdeecdedf65d84438d38c06acd6703ebb3d64287219e7b676dc2",
       "bytes": 4180
     },
     "keyboard/mapping-data.js": {
@@ -90,16 +106,16 @@
       "bytes": 1980
     },
     "keyman/PLATFORMS.md": {
-      "sha256": "1988fa02ddf5632a942e05ce05c676deafdd18eb8b1a1988d7dc9b8a37f27d23",
-      "bytes": 3173
+      "sha256": "fef1679b0b7cd570819acf0db60fd4a7023378cdd1bca70b6598730423e9d1d0",
+      "bytes": 3251
     },
     "keyman/build/ishtar_syrc.js": {
       "sha256": "c5ae0e111a19e1729eead15ca7465fabdb37551dd0a144515c4375deddd5f997",
       "bytes": 54835
     },
     "keyman/build/ishtar_syrc.kmp": {
-      "sha256": "a8464f38504e004a4ad7ccba401791d069cdd84ddffa03d7c03d9beadd42cd55",
-      "bytes": 141080
+      "sha256": "c5f63fe28f863dff9add98dea262ea249a84f561427d9e9e11dc292b3d8661e6",
+      "bytes": 148899
     },
     "keyman/build/ishtar_syrc.kmx": {
       "sha256": "c354d168e92146e026ebbc936a5aa3f4cebe75a63b9e64092ee40cc792f7aabc",
@@ -118,8 +134,16 @@
       "bytes": 62
     },
     "keyman/source/IshtarSyriacUnicodeAlpha-Regular.ttf": {
-      "sha256": "9bb429e85f97af4f49b101a6a4fe933dc9494d026755d045acdfd3476d6e039f",
-      "bytes": 934524
+      "sha256": "ea63a153018333a70e72350d71941bb556cfd858cb5c7f9f7dfe90cdac7b7d78",
+      "bytes": 948668
+    },
+    "keyman/source/NOTICE.md": {
+      "sha256": "652ece06f0918a37edd16262ffbe4f27835521b54384997e92d24f39e8aedbba",
+      "bytes": 1201
+    },
+    "keyman/source/OFL.txt": {
+      "sha256": "bf11d1b03482d1d53d82e9fa3384ac4c3f423445248b32eca4daef7a2de75dde",
+      "bytes": 4507
     },
     "keyman/source/ishtar_syrc.keyman-touch-layout": {
       "sha256": "a31e171789ff33ed6433135cceda53b7441d4915babc075de7eb3165cfae0625",
@@ -130,16 +154,16 @@
       "bytes": 3022
     },
     "keyman/source/ishtar_syrc.kps": {
-      "sha256": "c06cbcda60b3bca6685671f4e90f5a3dfa6d64d63c94b69eaa9af1d26e454117",
-      "bytes": 850
+      "sha256": "ae5f4bb79c701feb1c539b1d2a0dbe2a2d2e181834605eb262f1b2aa1c6d8a5b",
+      "bytes": 918
     },
     "keyman/source/readme.htm": {
-      "sha256": "fba22c0a6483ba64cb43ec201f0ac321651d372f1bb28f367ceb43e3f8316ca5",
-      "bytes": 1529
+      "sha256": "d308aaa2a87a629ec71e88cc1f93bcbd96d7e3ef67f3ed38bca58769822bda29",
+      "bytes": 1620
     },
     "keyman/source/welcome.htm": {
-      "sha256": "fba22c0a6483ba64cb43ec201f0ac321651d372f1bb28f367ceb43e3f8316ca5",
-      "bytes": 1529
+      "sha256": "d308aaa2a87a629ec71e88cc1f93bcbd96d7e3ef67f3ed38bca58769822bda29",
+      "bytes": 1620
     },
     "keyman/touch-coverage.json": {
       "sha256": "93e907ff40f04ff113faf3c8d2b3f5591d92f89ced532e74c36b83633588e0da",
@@ -150,12 +174,12 @@
       "bytes": 44132
     },
     "output/IshtarSyriacUnicodeAlpha-Regular.ttf": {
-      "sha256": "9bb429e85f97af4f49b101a6a4fe933dc9494d026755d045acdfd3476d6e039f",
-      "bytes": 934524
+      "sha256": "ea63a153018333a70e72350d71941bb556cfd858cb5c7f9f7dfe90cdac7b7d78",
+      "bytes": 948668
     },
     "output/IshtarSyriacUnicodeAlpha-Regular.woff2": {
-      "sha256": "5ab5c5a8af454434bc2e9bee9b9bfa0dca710e9a7fa39a57c9ed6bfa6e61b78e",
-      "bytes": 57572
+      "sha256": "5e7e620396b83d3b5b817d824e77c2a90ad7efa0eeb68e8a80bd8139e37a77cd",
+      "bytes": 61180
     },
     "output/IshtarSyriacUnicodeAlpha.fea": {
       "sha256": "874bccbff265ee652c7326465e6b400c2b5f445e6a5c427b60c1553d5fbdc5d7",
@@ -172,6 +196,10 @@
     "output/inspection.json": {
       "sha256": "b5798fcbf11e89bd22dc1485352221ee056be49178558744838f89a5d7d5aa7a",
       "bytes": 46842
+    },
+    "output/license-metadata-check.json": {
+      "sha256": "368ea65ee19fb704dd7fb67e2d69348a83cd5ec72f488a39d54072bcc5ab2466",
+      "bytes": 382
     },
     "output/majliyana-vowels-review.png": {
       "sha256": "f61a1551b1651188e76a46dea9847fdf22968294895a72839be6f93b2b9ff208",
@@ -210,16 +238,20 @@
       "bytes": 65
     },
     "tools/build_font.py": {
-      "sha256": "5bd7dc8866d882b454303f85af62cdcc689c2f7d499c9f63cfb84bad89534565",
-      "bytes": 27877
+      "sha256": "4a63d6199332a8bc9b05f8fb7a331dde5132c058940aa55ec6ea69666e22525e",
+      "bytes": 27943
     },
     "tools/build_keyboard.py": {
       "sha256": "be99d96122c97e5860005e9a11da40a478995cf372e69fce76c31190eed25746",
       "bytes": 1623
     },
     "tools/build_keyman.py": {
-      "sha256": "a31c725759e13b5557da5ae31b707b5e1b97b92a78b7ec8b3b0cdf0fea908588",
-      "bytes": 6569
+      "sha256": "db36257e3a3ebae83fd78e07c3aff6bae475ee69288797cc87866e34e6d55e48",
+      "bytes": 6737
+    },
+    "tools/font_license.py": {
+      "sha256": "3b41b46c5ad190872bc235531a122d7b2397cd48e0361dc457cec2a1623d5b22",
+      "bytes": 1540
     },
     "tools/inspect_font.py": {
       "sha256": "2d171fa012871e204cd540bd93c0acc78a4207ddbbacb6ddd3737be161c20a15",
@@ -234,8 +266,8 @@
       "bytes": 2429
     },
     "tools/verify_keyman.cjs": {
-      "sha256": "54a2931d23a46935e50ccc9b08655b636b694e80987f0a89f5240cb46f93ec42",
-      "bytes": 1219
+      "sha256": "3c976957238285005561714f5963387733322f399009df862a2320445640f876",
+      "bytes": 1253
     },
     "tools/verify_taw_alaph.py": {
       "sha256": "c030841aaeb5681df4a472eebc303a64dc9e1448421622a8ef30f38105914743",

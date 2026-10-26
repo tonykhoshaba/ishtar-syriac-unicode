@@ -266,6 +266,8 @@ f['OS/2'].sTypoAscender=1500;f['OS/2'].sTypoDescender=-1000;f['OS/2'].sTypoLineG
 for id,value in {1:'Ishtar Syriac Unicode Alpha',2:'Regular',3:'IshtarSyriacUnicodeAlpha-0.001',4:'Ishtar Syriac Unicode Alpha',5:'Version 0.001; review prototype',6:'IshtarSyriacUnicodeAlpha-Regular',10:'Experimental Unicode conversion of Tony Khoshaba’s Ishtar XP. Original provenance preserved. Not a production release.'}.items():
  f['name'].removeNames(nameID=id)
  for platform,enc,lang in [(3,1,0x409),(1,0,0)]:f['name'].setName(value,id,platform,enc,lang)
+from font_license import apply_ofl_metadata
+apply_ofl_metadata(f)
 fea=['languagesystem DFLT dflt;','languagesystem syrc dflt;','languagesystem syrc SYR;',"feature ccmp { } ccmp;"]
 for tag in ['init','medi','fina','fin2','fin3','med2']:
  rules=[f'sub {base} by {v[tag]};' for base,v in forms.items() if tag in v]

@@ -2,7 +2,7 @@
 
 A Unicode Eastern Syriac font based on Tony Khoshaba’s Ishtar XP, developed with the help of Yoab Benjamin. This project preserves the original letter designs while adding Unicode character mapping, contextual forms, mark positioning and OpenType ligatures.
 
-**Private release preparation — not yet a public release.** The working font remains named “Ishtar Syriac Unicode Alpha.” Distribution rights and earlier source attribution are being confirmed before a public license is selected.
+**Font software: SIL Open Font License 1.1. Licensing is closed as a release blocker.** The project is currently a font/keyboard review build. See [OFL.txt](OFL.txt), [NOTICE.md](NOTICE.md) and [the documented release basis](docs/LICENSING.md).
 
 ## What is here
 
@@ -46,6 +46,10 @@ python tools/verify_taw_alaph.py
 
 The build uses the original Ishtar XP font as its input. The original is not automatically licensed for redistribution by the existence of this repository. Font inspection/proof tools may require DejaVu fonts; they do not copy DejaVu outlines into Ishtar.
 
-## Credits and rights
+## Credits and license
 
-See `docs/PROVENANCE.md` and `LICENSE-PENDING.md`. Public distribution is pending resolution of those items. No open-source license is being asserted at this stage.
+The project adopts SIL OFL 1.1 using the published Sparksoft Systems Marcus-font release and Sargon Hasso's clarification, accepted by Tony Khoshaba. Credit Esho Marcus, Sargon Hasso and Sparksoft Systems for the source work, and Tony Khoshaba with Yoab Benjamin for Ishtar's modifications and review. Preserve the notices and do not use the reserved derivative family names Marcus or Nohadra. See `NOTICE.md`, `docs/PROVENANCE.md` and `docs/LICENSING.md`.
+
+## Current focus: debugging
+
+Tony is reviewing the complete Kokhva comparison PDFs. The next work is fixing reproducible appearance issues, approving combined marks, and gathering iPhone/Windows/Linux keyboard and font feedback. Technical tasks are tracked in `docs/RELEASE-CHECKLIST.md`. Licensing is no longer an investigation or permission-wait task. The repository's current visibility and prerelease status are separate from its license.

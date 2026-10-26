@@ -1,0 +1,75 @@
+FONTLOG
+Syriac Marcus font families
+===========================
+
+This file provides detailed information on the Syriac Marcus font software.
+This information should be distributed along with the Syriac Marcus fonts and
+any derivative works.
+
+
+Basic Font Information
+----------------------
+
+The goal for these products is to provide Unicode-based fonts that  
+contain a comprehensive inventory of glyphs needed for almost any Estrangelo 
+or East Syriac-based writing system. In addition, there is minimal provision 
+for other Latin characters and symbols. 
+
+Four fonts are included in this release:
+
+     * Estrangelo Marcus Regular
+     * East Syriac Marcus Regular
+     * East Syriac Nohadra Regular
+     * AAA-Manuscript Marcus Regular
+
+Appreciation
+----------------------
+We wish to express our appreciation to Paul Nelson and George Kiraz of SIL, and Syriac 
+Computing Institute, respectively for their early assistance in getting the Syriac script 
+encoded in Unicode (http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf) 
+as well as in developing the OpenType specification for Syriac 
+(https://learn.microsoft.com/en-us/typography/script-development/syriac).
+
+ChangeLog
+---------
+(This should list both major and minor changes, most recent first.)
+
+### 15 Jan 2025 AAA-Manuscript Marcus, East Syriac Nohadra, East Syriac Marcus, Estrangelo Marcus version 1.100
+- Re-released under the SIL Open Font License (https://openfontlicense.org/).
+- Copyright reassigned fromSyriac Advanced Software to Sparksoft Systems.
+- No structural changes to the fonts.
+
+### 11 Jul 2010 AAA-Manuscript Marcus version 1.0
+- Initial release.
+
+### 29 September 2004 East Syriac Nohadra version 1.0
+- Initial release.
+
+### 29 September 2004 East Syriac Marcus version 1.0
+- Initial release.
+
+### 29 September 2004 Estrangelo Marcus version 1.0
+- Initial release.
+
+### 1997 East Syriac Marcus unversioned
+- Initial release.
+
+Acknowledgements
+----------------
+(Here is where contributors can be acknowledged. If you make modifications
+be sure to add your name (N), email (E), web-address (W) and description
+(D). This list is sorted by last name in alphabetical order.)
+
+N: Sargon Hasso
+W: https://github.com/SparksoftSystems/Syriac-Fonts
+D: OpenType developer
+
+N: Esho Marcus
+W: https://github.com/SparksoftSystems/Syriac-Fonts
+D: Type Designer
+
+The Syriac Marcus project is maintained by Sparksoft Systems.
+
+For more information please visit the Syriac Marcus page on this website:
+https://github.com/SparksoftSystems/Syriac-Fonts
+

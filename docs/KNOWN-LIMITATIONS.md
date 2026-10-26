@@ -1,18 +1,15 @@
-# Known limitations of the working preview
+# Known limitations — font and keyboard debugging
 
-- This is a preview build, not a certified complete Syriac Unicode font.
-- The keyboard currently reports 39 mappings containing one or more characters absent from the font. These include everyday punctuation and less common symbols/extended letters. See `keyboard/compatibility.json`; the browser may show fallback-font glyphs for those keys.
-- Existing Ramsina keyboard assignments are retained exactly. Some use generic combining-dot characters where another key uses a Syriac-specific mark. These distinctions need documenting/testing; text is not silently rewritten.
-- Single-mark and selected ligature proofs were reviewed by Tony. Some combined vowel/Seyame placements remain provisional, and input mark-order coverage needs further testing.
-- Word-final Taw–Alap automation and explicit overrides have shaping checks. Every override/mark combination has not yet received visual review.
-- Manual font features are application-dependent. The demo’s word-specific overrides are saved locally in the browser; plain-text export loses styling.
-- The keyboard is a browser implementation, not a native system keyboard or mobile touch layout.
-- Only the current local browser and Python/HarfBuzz shaping checks are verified. Windows/macOS/Linux desktop applications and mobile applications still require interoperability testing.
-- Working font internal names/version still say Alpha/0.001. Final preview release metadata must be set consistently before shipping.
-- Original-outline and keyboard provenance/licenses remain unresolved. Public distribution is blocked until resolved.
+Licensing is closed as a release blocker; see [LICENSING.md](LICENSING.md). Current limitations are technical:
 
-Version 1 will focus on practical coverage and reliable typing. Real text from a Kokhva issue will guide later refinement rather than hypothetical per-letter mark combinations.
+- Working family/version remains Alpha/0.001; final release metadata is pending.
+- Thirty-eight keyboard mappings include characters not drawn by Ishtar; fallback fonts may supply them. See `keyboard/compatibility.json`.
+- Combined vowel/Seyame, Talqana and below-mark placements are candidates pending visual approval. Five review sheets include connected Gamal/Kaph cases. Twenty-five Seyame entry-order checks pass; 264 single-mark render comparisons were unchanged.
+- Kokhva has a complete 12-page Ishtar comparison with unchanged reviewed text; Tony is reviewing the PDFs for font defects.
+- All 122 keyboard outputs pass compiled-rule checks. Actual installation/app tests on iPhone, Windows and Linux are pending; phone/tablet layouts and desktop Keyman packages exist.
+- Mobile applications select their own display font. Inspect Ishtar inside Keyman first; other apps may display another Syriac font.
+- OpenType stylistic sets and word-level overrides depend on application support. Plain text cannot preserve font-feature choices.
+- Not every Taw–Alaph override/mark combination has received visual review.
+- Existing reviewed key encodings are preserved, including generic versus Syriac-specific combining marks; text is not silently rewritten.
 
-## 2026-10-26 update
-
-The package now includes Keyman desktop/mobile files and phone/tablet layouts. Real-device testing is still pending. Font coverage gaps now affect 38 mappings; U+2010 and U+0723 have been added from existing Ishtar outlines. Five new mixed-mark review sheets are prepared, including connected Gamal/Kaph forms; their visual approval is pending. Twenty-five Seyame entry-order tests pass, and all 264 approved single-mark render comparisons remain unchanged. A complete 12-page Kokhva Ishtar comparison was rendered locally with unchanged transcription.
+Report issues using exact Unicode text, font build, app/device/version and a screenshot. Debug the actual Ishtar build; the optional Noto tester kit checks input only.

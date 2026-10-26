@@ -22,6 +22,6 @@ Suggested device test: type `ܫܠܵܡܵܐ ܒܬܐ ܕܬܐ ܪ̈ ܡ̣ܢ ܒ݇̈`; try
 
 The compiler succeeds and all 122 compiled outputs match the source mapping. This is not a claim of completed testing on five operating systems. Some less-used Ramsina key outputs are not drawn in Ishtar yet and use fallback fonts; see `../keyboard/compatibility.json`.
 
-Private evaluation only. The original font outline license remains unresolved. This package is not a public release.
+Licensing is closed as a project release blocker. The font software is supplied under SIL OFL 1.1 with OFL.txt and NOTICE.md. This remains a review build, with visual and device testing pending.
 
 Build (Node 20+): install the pinned compiler with `npm ci --prefix compiler`; run `python ../tools/build_keyman.py`, then `compiler/node_modules/.bin/kmc --no-error-reporting build source/ishtar_syrc.kmn -o build/ishtar_syrc.kmx` and the same command for `source/ishtar_syrc.kps -o build/ishtar_syrc.kmp`.

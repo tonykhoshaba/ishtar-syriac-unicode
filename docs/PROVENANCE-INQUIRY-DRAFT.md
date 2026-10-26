@@ -1,3 +1,5 @@
+**Superseded historical draft — not sent.** No inquiry is currently required: the owner accepted the Sparksoft/Sargon OFL release basis. See LICENSING.md.
+
 # Unsent enquiry draft
 
 Potential recipient: Beth Mardutho / a knowledgeable maintainer of the historical SyrCOM fonts. Verify a current official contact before sending. This is not a sent message and is not authorization to send it.

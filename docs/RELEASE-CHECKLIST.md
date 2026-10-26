@@ -1,34 +1,26 @@
-# Version 1 preview release checklist
+# Ishtar release checklist
 
-## Required before public release
+## Licensing — closed as a release blocker
 
-- [ ] Resolve original-outline provenance and redistribution rights.
-- [ ] Approve font, keyboard/code and documentation license terms; preserve credits.
-- [ ] Audit public repository history and remove non-redistributable source material if necessary.
-- [ ] Resolve/clearly scope keyboard font-coverage gaps, starting with common punctuation.
-- [ ] Confirm final family name, internal version, release tag and filenames.
-- [ ] Run repeatable build and shaping checks; record results and font hashes.
-- [ ] Test Windows/macOS/Linux application installation and typing; document tested versions.
-- [ ] Inspect Taw–Alap auto behavior and overrides with vowels in real text.
-- [ ] Verify mark stacking for common input orders.
-- [ ] Prepare printable keyboard reference and specimen PDF.
-- [ ] Verify packaged TTF, WOFF2 and static demo; avoid shipping an environment or private review text.
-- [ ] Review and approve the exact public ZIP/repository/website contents.
+- [x] Locate an explicit upstream license and preserve the source records.
+- [x] Record Sargon Hasso's clarification and Tony's decision to adopt the release basis.
+- [x] Adopt SIL OFL 1.1 for project font software and preserve credits/reserved names.
+- [x] Retain historical attribution notes without treating them as an ongoing permission wait.
 
-## Later improvements
+## Technical work — current focus
 
-- [ ] Native desktop and mobile keyboard packages.
-- [ ] Kokhva real-text test and version 2 findings.
-- [ ] Additional uncommon symbols and combined-mark refinements.
+- [x] Build desktop and phone/tablet Keyman packages.
+- [x] Verify all 122 compiled keyboard outputs against the reviewed mapping.
+- [x] Prepare Talqana/Seyame, below-mark and connected Gamal/Kaph review sheets.
+- [x] Generate all 12 Kokhva comparison pages with unchanged reviewed transcription.
+- [x] Verify 264 single-mark renders remain unchanged after combination work.
+- [ ] Collect Tony's Kokhva PDF appearance feedback and fix reproducible font defects.
+- [ ] Approve mixed vowels, Seyame, Talqana and below-mark combinations.
+- [ ] Collect iPhone and Windows tester feedback; complete Tony's Linux test.
+- [ ] Test Taw–Alaph automation and supported overrides in actual applications.
+- [ ] Resolve or clearly document remaining character-coverage gaps (currently 38 mapped outputs).
+- [ ] Finalize family/version metadata, release filenames and a keyboard reference/specimen.
+- [ ] Verify fresh TTF/WOFF2/KMP packages contain matching font builds and required notices.
+- [ ] Approve the finished public release, repository visibility and any website deployment.
 
-Preparing this private repository or archive does not fulfill the unchecked public-release requirements.
-
-## Private test progress, 2026-10-26
-
-- [x] Build Keyman desktop and phone/tablet package; verify all 122 compiled key outputs.
-- [x] Generate a complete Kokhva comparison with unchanged reviewed text.
-- [x] Prepare Talqana/Seyame and below-mark mixed review sheets.
-- [ ] Obtain visual approval of the new combinations.
-- [ ] Install and test the KMP on actual desktop and mobile devices.
-
-These replace the earlier “later improvements” deferral of package generation and Kokhva testing; public release requirements remain unchanged.
+The font remains a review build. Public publication is a separate release action; this checklist does not itself change repository visibility or announce version 1.0.

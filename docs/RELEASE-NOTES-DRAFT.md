@@ -1,7 +1,7 @@
-# Ishtar Syriac Unicode — Version 1 Preview (draft)
+# Ishtar Syriac Unicode — preview notes
 
-This preview brings Tony Khoshaba’s Ishtar XP designs into a Unicode Syriac workflow, with positional letter shaping, reviewed vowel/mark placement and a Ramsina-editor-compatible browser keyboard.
+Tony Khoshaba's Ishtar XP designs, developed with guidance from Yoab Benjamin, now have Unicode mapping, positional shaping, reviewed single marks, automatic word-final Taw–Alaph selection and explicit alternate controls in supporting applications.
 
-It includes automatic word-final Taw–Alap selection following Yoab Benjamin’s lecture rule, explicit alternate-form controls, curved Fe, full-size Seyame, dotted He and Majliyana support reviewed for modern Assyrian usage, including Urmi combinations.
+The font software adopts SIL OFL 1.1 on the documented Sparksoft Systems/Sargon Hasso source basis. Required source credits and reserved names are preserved; see OFL.txt, NOTICE.md and docs/LICENSING.md. Licensing is closed as a release blocker.
 
-The font’s working internal version is still 0.001 Alpha. This draft does not announce a released 1.0 version. Native keyboard packages, wider application testing, remaining glyph coverage and public licensing are still pending.
+A Keyman package supplies the familiar Ramsina-compatible key mapping for desktop and phone/tablet platforms. All 122 key outputs pass compiled-rule tests. Five mixed-mark sheets and a full 12-page Kokhva comparison support current debugging. Visual approval, actual device tests, coverage and final release metadata remain pending. This document does not announce a released version 1.0.

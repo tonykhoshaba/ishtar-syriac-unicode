@@ -6,7 +6,7 @@ New unoccupied keys: Right Alt+H = He + U+0307; Right Alt+R = U+0742 Rukakha; Ri
 
 The Taw–Alap selector controls font features ss01 / ss02 for the entire typing field. These choices are presentation settings, not separate Unicode characters, and are not preserved in plain-text export.
 
-Coverage report: compatibility.json. Amber keys in the page indicate font coverage gaps. Retaining a key assignment does not claim a matching glyph exists in this alpha font. Original mapping provenance and SHA-256 are recorded in the report. Source editor mapping author/license still needs review before public keyboard distribution.
+Coverage report: compatibility.json. Amber keys in the page indicate font coverage gaps. Retaining a key assignment does not claim a matching glyph exists in this alpha font. The mapping baseline and SHA-256 are recorded in the report. This keyboard accompanies the owner-adopted OFL font software; see ../OFL.txt and ../NOTICE.md.
 
 Run `../.venv/bin/python ../tools/build_keyboard.py` from this folder to regenerate mapping artifacts after changing font coverage. Text is saved locally in the browser and can be downloaded. No text is transmitted elsewhere.
 
