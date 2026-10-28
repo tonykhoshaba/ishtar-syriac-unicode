@@ -2,7 +2,7 @@ from pathlib import Path
 from PIL import Image,ImageFont,ImageDraw
 import json,uharfbuzz as hb
 from fontTools.ttLib import TTFont
-R=Path(__file__).resolve().parents[1];O=R/'output';P=O/'IshtarSyriacUnicodeAlpha-Regular.ttf';f=TTFont(P);face=hb.Face(P.read_bytes());hf=hb.Font(face)
+R=Path(__file__).resolve().parents[1];O=R/'output';P=O/'IshtarSyriacUnicode-Regular.ttf';f=TTFont(P);face=hb.Face(P.read_bytes());hf=hb.Font(face)
 letters=list(zip('ܐܒܓܕܗܘܙܚܫܝܟܠܡܢܤܥܦܨܩܪܛܬ',['Alaph','Beth','Gamal','Dalath','He','Waw','Zain','Heth','Shin','Yudh','Kaph','Lamadh','Mim','Nun','Semkath','Ain','Pe','Sadhe','Qoph','Resh','Teth','Taw']))
 ft=ImageFont.truetype(str(P),54);lab=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',19);sm=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',15)
 groups=[('talqana-seyame','TALQANA WITH SEYAME',[('Above silencer + Seyame','݇̈'),('Below silencer + Seyame','݈̈')]),('below-vowels-seyame','BELOW VOWELS WITH SEYAME',[('Horizontal zlama + Seyame','ܸ̈'),('Angular zlama + Seyame','ܹ̈')]),('rukakha-vowels','RUKAKHA WITH VOWELS',[('Rukakha + Ptakha','݂ܲ'),('Rukakha + Zlama','݂ܸ')]),('majliyana-vowels','BELOW MAJLIYANA WITH VOWELS',[('Majliyana + Ptakha','̰ܲ'),('Majliyana + Zqapa + Seyame','̰ܵ̈')])]

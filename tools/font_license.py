@@ -12,7 +12,7 @@ def apply_ofl_metadata(font):
   for platform,encoding,language in [(3,1,0x409),(1,0,0)]:font['name'].setName(value,id,platform,encoding,language)
 if __name__=='__main__':
  import hashlib,json
- p=R/'output/IshtarSyriacUnicodeAlpha-Regular.ttf';f=TTFont(p)
+ p=R/'output/IshtarSyriacUnicode-Regular.ttf';f=TTFont(p)
  before={k:hashlib.sha256(f.getTableData(k)).hexdigest() for k in f.keys() if k not in ['GlyphOrder','name','head']}
  apply_ofl_metadata(f);f.save(p);g=TTFont(p)
  after={k:hashlib.sha256(g.getTableData(k)).hexdigest() for k in g.keys() if k not in ['GlyphOrder','name','head']}

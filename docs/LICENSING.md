@@ -1,6 +1,6 @@
-# Licensing — closed as a release blocker
+# License and source basis
 
-**Project decision, 2026-10-26:** Tony Khoshaba approved closing the licensing investigation as a release blocker and continuing font/keyboard debugging. The project adopts **SIL Open Font License 1.1** for Ishtar font software, supplied with `OFL.txt` and the required copyright/credit notices.
+Ishtar Syriac Unicode font software is distributed under **SIL Open Font License 1.1**, supplied in `OFL.txt` with its copyright notices. The project adopted the source/license basis below on October 26, 2026.
 
 ## Basis
 
@@ -10,7 +10,7 @@ Tony reports that Sargon Hasso directly supplied the Sparksoft Systems Syriac-Fo
 - [Pinned license](https://github.com/SparksoftSystems/Syriac-Fonts/blob/35c96f4d59613089e79a6f44f81d946b4bff5de5/OFL.txt)
 - [Pinned font history](https://github.com/SparksoftSystems/Syriac-Fonts/blob/35c96f4d59613089e79a6f44f81d946b4bff5de5/FONTLOG.txt)
 
-This records the project's accepted source/license basis, relying on the published grant and the clarification from an identified upstream contributor. The complete point-by-point ancestry of the 1990s Nisibus-labelled file has not been reconstructed. That remains historical documentation, not an active release blocker or a claim of a completed forensic ownership audit. No additional inquiry to Dr. Marcus is required by the project decision.
+This records the project's accepted source/license basis, relying on the published grant and the clarification from an identified upstream contributor. The complete point-by-point ancestry of the 1990s Nisibus-labelled file has not been reconstructed. This describes the accepted source history without claiming a complete forensic reconstruction of every legacy outline.
 
 ## Distribution requirements
 
@@ -18,6 +18,3 @@ Keep `OFL.txt` and the copyright/credit notices with the font, including in keyb
 
 The license covers this project's font software and accompanying project build/keyboard material distributed as part of that font software. Third-party compiler/runtime dependencies retain their own licenses and are not relicensed by this file. See `NOTICE.md` for credits.
 
-## Release status
-
-Licensing is closed as a project blocker. This does not certify font quality: mixed-mark review, Kokhva appearance feedback, device installation, keyboard interoperability, coverage and final version metadata remain technical release tasks. Updating these documents does not change repository visibility, enable Pages or publish a tagged release.

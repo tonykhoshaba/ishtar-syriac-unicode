@@ -83,9 +83,7 @@
     "text": "ܐܵܢܵܐ ܒܲܝܬܵܐ ܫܠܵܡܵܐ ܟܬܵܒ݂ܵܐ",
     "glyphs": [
       "uni0710.fina",
-      "uni0735",
-      "rukakha.beth",
-      "uni0712.init",
+      "stack.uni0712.init.uni0742.uni0735",
       "uni0735",
       "uni072C.fina",
       "uni071F.init",
@@ -114,9 +112,7 @@
     "text": "ܟܬܵܒ݂ܝܼ ܟܬܵܒ݂ܘܼܟ݂ ܟܬܵܒ݂ܵܟ݂ܝ ܟܬܵܒ݂ܹܗ",
     "glyphs": [
       "uni0717.fina",
-      "uni0739",
-      "rukakha.beth",
-      "uni0712.init",
+      "stack.uni0712.init.uni0742.uni0739",
       "uni0735",
       "uni072C.fina",
       "uni071F.init",
@@ -124,9 +120,7 @@
       "uni071D.fina",
       "rukakha.kaph.medial",
       "uni071F.medi",
-      "uni0735",
-      "rukakha.beth",
-      "uni0712.init",
+      "stack.uni0712.init.uni0742.uni0735",
       "uni0735",
       "uni072C.fina",
       "uni071F.init",
@@ -177,13 +171,12 @@
     ]
   },
   {
-    "text": "ܡ̇ܢ ܡ̣ܢ ܪ̈ ܐܵܬܘܿܪ̈ܵܝܹܐ",
+    "text": "ܡ̣ܢ ܪ̈ ܐܵܬܘܿܪ̈ܵܝܹܐ",
     "glyphs": [
       "uni0710.fina",
       "zlameh.angular.lowered",
       "uni071D.init",
-      "uni0735",
-      "rish.seyame",
+      "stack.uni072A.uni0735.uni0308",
       "uni073F",
       "uni0718",
       "uni072C",
@@ -194,10 +187,6 @@
       "space",
       "uni0722.fina",
       "rukakha.beth",
-      "uni0721.init",
-      "space",
-      "uni0722.fina",
-      "uni0307",
       "uni0721.init"
     ]
   }

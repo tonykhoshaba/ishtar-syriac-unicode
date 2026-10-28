@@ -1,0 +1,15 @@
+{
+  "font_internal_version": "Version 1.000",
+  "family": "Ishtar Syriac Unicode",
+  "approved_design_tables_identical": false,
+  "glyphs": 2630,
+  "unicode_mappings": 82,
+  "ttf_woff2_design_match": true,
+  "kmp_embedded_font_matches": true,
+  "kmp_notices_match": true,
+  "compiled_key_mappings": 122,
+  "local_html_links_valid": true,
+  "public_release": false,
+  "letter_outlines_metrics_and_gpos_preserved": true,
+  "detached_kap_dot_owner_approved": true
+}

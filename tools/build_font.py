@@ -1,4 +1,4 @@
-"""Build a review-only Unicode alpha using only the user's original outlines."""
+"""Build Ishtar Syriac Unicode 1.000 from the historical Ishtar XP outlines."""
 from pathlib import Path
 from copy import deepcopy
 import json
@@ -12,7 +12,7 @@ f=TTFont(R/'originals/ISHAR_XP.ttf');old=f.getGlyphOrder();mapping={};forms={};c
 def copy(name,source,width=None):
  f['glyf'][name]=deepcopy(f['glyf'][source]);f['hmtx'][name]=(f['hmtx'][source][0] if width is None else width,f['hmtx'][source][1]);old.append(name)
 # id, initial/medial source, isolated/final source; mappings remain subject to expert review.
-letters=[(0x710,'a','a'),(0x712,'b','B'),(0x713,'g','W'),(0x715,'d','d'),(0x717,'h','h'),(0x718,'w','w'),(0x719,'z','z'),(0x71a,'x','X'),(0x71b,'j','T'),(0x71d,'y','Y'),(0x71f,'k','K'),(0x720,'l','l'),(0x721,'m','M'),(0x722,'n','N'),(0x724,'s','Z'),(0x725,'v','AE'),(0x726,'p','I'),(0x728,'c','c'),(0x729,'q','Q'),(0x72a,'r','r'),(0x72b,'f','f'),(0x72c,'t','t')]
+letters=[(0x710,'a','a'),(0x712,'b','B'),(0x713,'g','W'),(0x715,'d','d'),(0x717,'h','h'),(0x718,'w','w'),(0x719,'z','z'),(0x71a,'x','X'),(0x71b,'j','T'),(0x71d,'y','Y'),(0x71f,'k','K'),(0x720,'l','asciicircum'),(0x721,'m','M'),(0x722,'n','N'),(0x724,'s','Z'),(0x725,'v','AE'),(0x726,'p','I'),(0x728,'c','c'),(0x729,'q','Q'),(0x72a,'r','r'),(0x72b,'f','f'),(0x72c,'t','t')]
 for cp,join,stand in letters:
  base=f'uni{cp:04X}';copy(base,stand);cmap[cp]=base;forms[base]={}
  for tag,src in [('init','G' if cp==0x713 else 'exclamdown' if cp==0x725 else 'T' if cp==0x72c else join),('medi','T' if cp==0x72c else join),('fina','T' if cp==0x71b else 'I' if cp==0x726 else 'O' if cp==0x722 else 'c129' if cp==0x713 else 'V' if cp==0x725 else 'L' if cp==0x71f else stand)]:
@@ -25,6 +25,7 @@ for tag,src in [('fina','A'),('fin2','A'),('fin3','a'),('med2','a')]:
  forms['uni0710'][tag]=n
 # Second standalone ain, confirmed legacy 0x201A; optional alternate.
 copy('ain.isol.alt','quotesinglbase')
+# Final/isolated Lamad: Tony confirmed legacy 0x5E on 2026-10-27; initial/medial remain 0x6C.
 # User-confirmed divine-name yudh-he at legacy 0x55 (U).
 copy('uni071E','U');cmap[0x71e]='uni071E'
 copy('alaph.after.lamadh','C')
@@ -64,7 +65,7 @@ for target in [-135,135]:
 f['glyf']['seyame.source']=pen.glyph();f['glyf']['seyame.source'].recalcBounds(f['glyf'])
 f['hmtx']['seyame.source']=(0,f['glyf']['seyame.source'].xMin)
 
-# Correct original resh-seyame glyph is still being identified.
+# Retained historical outline sources and optional calligraphic forms.
 copy('sadhe.nun.liga','c128')
 copy('pe.fe.legacy','quotedblbase')
 copy('pe.fe.connected','P')
@@ -134,8 +135,18 @@ for name,dx in [('zlameh.angular.gamal',-180),('zlameh.angular.teth',-100)]:
  for i,(x,y) in enumerate(zg.coordinates):zg.coordinates[i]=(x+dx,y+40)
  zg.recalcBounds(f['glyf']);f['hmtx'][name]=(0,zg.xMin)
  markinfo.append((name,'bottom',anchor_x,zg.yMax-zg.yMin))
+# Gamal review 2026-10-27: raise detached pairs; attached final left/up.
+gamal_zlameh_rules=[]
+for vowel,prefix in [('uni0738','horizontal'),('uni0739','angular')]:
+ for suffix,dx,dy,targets in [('isol',0 if prefix=='horizontal' else -180,140,['uni0713']),('final',-300,140,['uni0713.fina'])]:
+  name='zlameh.'+prefix+'.gamal.review.'+suffix
+  copy(name,vowel,0);g=f['glyf'][name];anchor=(g.xMin+g.xMax)//2
+  for i,(x,y) in enumerate(g.coordinates):g.coordinates[i]=(x+dx,y+dy)
+  g.recalcBounds(f['glyf']);f['hmtx'][name]=(0,g.xMin)
+  markinfo.append((name,'bottom',anchor,g.yMax-g.yMin));gamal_zlameh_rules.append((vowel,name,targets))
 # Fuller single-dot optical adjustments from the current review.
 single_dot_rules=[('khwasa.final','uni073C',80,0,['uni071D','uni071D.fina']),('rwasa.lowered','uni073C',0,-60,['uni0718','uni0718.init','uni0718.medi','uni0718.fina']),('rukakha.beth','uni0742',0,-60,['uni0712','uni0712.init','uni0712.medi','uni0712.fina']),('rukakha.kaph.detached','uni0742',-220,530,['uni071F']),('rukakha.kaph.initial','uni0742',0,-40,['uni071F.init']),('rukakha.kaph.medial','uni0742',0,-40,['uni071F.medi']),('rukakha.kaph.final','uni0742',-180,220,['uni071F.fina']),('rukakha.gamal.isol','uni0742',0,180,['uni0713']),('rukakha.gamal.init','uni0742',0,260,['uni0713.init']),('rukakha.gamal.medi','uni0742',-180,180,['uni0713.medi']),('rukakha.gamal.fina','uni0742',0,180,['uni0713.fina']),('rukakha.taw','uni0742',0,-40,['uni072C','uni072C.init','uni072C.medi','uni072C.fina'])]
+single_dot_rules=[(name,src,dx-120,dy+100,targets) if name.startswith('rukakha.gamal.') else (name,src,dx,dy,targets) for name,src,dx,dy,targets in single_dot_rules]
 for name,src,dx,dy,targets in single_dot_rules:
  copy(name,src,0);zg=f['glyf'][name];anchor_x=(zg.xMin+zg.xMax)//2
  for i,(x,y) in enumerate(zg.coordinates):zg.coordinates[i]=(x+dx,y+dy)
@@ -143,6 +154,7 @@ for name,src,dx,dy,targets in single_dot_rules:
  markinfo.append((name,'bottom',anchor_x,zg.yMax-zg.yMin))
 # Majliyana below Gamal: optical placement by positional form.
 majliyana_rules=[('majliyana.gamal.isol',0,180,['uni0713']),('majliyana.gamal.connected',-180,180,['uni0713.init','uni0713.medi','uni0713.fina'])]
+majliyana_rules=[(name,dx-120,dy+100,targets) for name,dx,dy,targets in majliyana_rules]
 for name,dx,dy,targets in majliyana_rules:
  copy(name,'uni0330',0);zg=f['glyf'][name];anchor_x=(zg.xMin+zg.xMax)//2
  for i,(x,y) in enumerate(zg.coordinates):zg.coordinates[i]=(x+dx,y+dy)
@@ -205,7 +217,11 @@ for base in list(forms):
     combos += [(lower,vowel),(lower,vowel,'uni0308')]
   for seq in combos:
    n='stack.'+b+'.'+'.'.join(seq);pen=TTGlyphPen(f.getGlyphSet());f.getGlyphSet()['rish.dotless' if base=='uni072A' and 'uni0308' in seq else b].draw(pen)
-   def drawmark(src,x,y):
+   gamal_lower_review=base=='uni0713' and any(m in seq for m in ['uni0742','uni0330'])
+   def drawmark(src,x,y,lower_component=False):
+    if gamal_lower_review:
+     x-=240 if b=='uni0713.medi' and 'uni0330' in seq else 120
+     y+=0 if lower_component else 100
     g=f['glyf'][src];g.recalcBounds(f['glyf']);f.getGlyphSet()[src].draw(TransformPen(pen,(1,0,0,1,x-(g.xMin+g.xMax)/2,y)))
    sy=705 if base=='uni072A' else top
    if base=='uni072B':sy-=100
@@ -230,14 +246,19 @@ for base in list(forms):
     else:
      for name,dx,dy,targets in majliyana_rules:
       if b in targets:src=name
-    drawmark(src,cx,lower_floor)
+    drawmark(src,cx,lower_floor,lower_component=True)
     lower_floor = min(lower_floor,lower_floor+f['glyf'][src].yMin)-90
    for vowel,prefix in [('uni0738','horizontal'),('uni0739','angular')]:
     if vowel not in seq:continue
     src='zlameh.'+prefix+'.lowered'
     if base=='uni0713':src='zlameh.'+prefix+'.gamal'+('.attached' if vowel=='uni0738' and b.endswith(('.medi','.fina')) else '')
     if base=='uni072B':src='zlameh.'+prefix+'.teth'
-    drawmark(src,cx,lower_floor)
+    if base=='uni0713' and not gamal_lower_review:
+     for source,name,targets in gamal_zlameh_rules:
+      if vowel==source and b in targets:src=name
+    extra_x=-180 if base=='uni0713' and b in ['uni0713.medi','uni0713.fina'] and 'uni0308' in seq else 0
+    extra_y=100 if base=='uni0713' and b=='uni0713.medi' and 'uni0308' in seq else 0
+    drawmark(src,cx+extra_x,lower_floor+extra_y)
 
    if 'uni0732' in seq:
     src='pthaha.'+b if 'pthaha.'+b in f['glyf'] else 'uni0732'
@@ -263,7 +284,7 @@ f['OS/2'].ulCodePageRange1=0;f['OS/2'].ulCodePageRange2=0;f['OS/2'].ulUnicodeRan
 f['OS/2'].ulUnicodeRange3=1<<(71-64);f['OS/2'].ulUnicodeRange4=0;f['OS/2'].usFirstCharIndex=min(cmap);f['OS/2'].usLastCharIndex=max(cmap)
 f['OS/2'].sTypoAscender=1500;f['OS/2'].sTypoDescender=-1000;f['OS/2'].sTypoLineGap=100;f['OS/2'].usWinAscent=1600;f['OS/2'].usWinDescent=1100;f['hhea'].ascent=1500;f['hhea'].descent=-1000;f['hhea'].lineGap=100
 # Preserve original copyright/provenance, but give the derivative a unique identity.
-for id,value in {1:'Ishtar Syriac Unicode Alpha',2:'Regular',3:'IshtarSyriacUnicodeAlpha-0.001',4:'Ishtar Syriac Unicode Alpha',5:'Version 0.001; review prototype',6:'IshtarSyriacUnicodeAlpha-Regular',10:'Experimental Unicode conversion of Tony Khoshaba’s Ishtar XP. Original provenance preserved. Not a production release.'}.items():
+for id,value in {1:'Ishtar Syriac Unicode',2:'Regular',3:'IshtarSyriacUnicode-1.000',4:'Ishtar Syriac Unicode',5:'Version 1.000',6:'IshtarSyriacUnicode-Regular',10:'Unicode Eastern Syriac font based on Tony Khoshaba’s Ishtar XP, developed with historical guidance from the late Rabi Yoab Benjamin.'}.items():
  f['name'].removeNames(nameID=id)
  for platform,enc,lang in [(3,1,0x409),(1,0,0)]:f['name'].setName(value,id,platform,enc,lang)
 from font_license import apply_ofl_metadata
@@ -291,14 +312,17 @@ fea.append("feature calt { sub [uni0728 uni0728.init uni0728.medi uni0728.fina u
 zlameh_families=['uni0710','uni0712','uni0715','uni0718','uni0719','uni071A','uni071B','uni071D','uni071F','uni0720','uni0721','uni0722','uni0724','uni0725','uni0726','uni0728','uni0729','uni072A','uni072C']
 zlameh_bases=[g for g in old if any(g==b or g.startswith(b+'.') for b in zlameh_families)]+['alaph.after.lamadh','rish.dotless','rish.seyame']
 fea.append("feature calt { sub ["+' '.join(zlameh_bases)+"] uni0738' by zlameh.horizontal.lowered; } calt;")
-fea.append("feature calt { sub [uni0713 uni0713.init] uni0738' by zlameh.horizontal.gamal; sub [uni0713.medi uni0713.fina] uni0738' by zlameh.horizontal.gamal.attached; } calt;")
+fea.append("feature calt { sub uni0713.init uni0738' by zlameh.horizontal.gamal; sub uni0713.medi uni0738' by zlameh.horizontal.gamal.attached; } calt;")
 fea.append("feature calt { sub [uni072B uni072B.init uni072B.medi uni072B.fina] uni0738' by zlameh.horizontal.teth; } calt;")
 
 angular_families=['uni0710','uni0712','uni0718','uni071A','uni071B','uni071D','uni071F','uni0720','uni0721','uni0722','uni0724','uni0725','uni0726','uni0728','uni0729','uni072A','uni072C']
 angular_bases=[g for g in old if any(g==b or g.startswith(b+'.') for b in angular_families)]+['alaph.after.lamadh','rish.dotless','rish.seyame']
 fea.append("feature calt { sub ["+' '.join(angular_bases)+"] uni0739' by zlameh.angular.lowered; } calt;")
 
-fea.append("feature calt { sub [uni0713 uni0713.init uni0713.medi uni0713.fina] uni0739' by zlameh.angular.gamal; sub [uni072B uni072B.init uni072B.medi uni072B.fina] uni0739' by zlameh.angular.teth; } calt;")
+fea.append("feature calt { sub [uni0713.init uni0713.medi] uni0739' by zlameh.angular.gamal; sub [uni072B uni072B.init uni072B.medi uni072B.fina] uni0739' by zlameh.angular.teth; } calt;")
+
+for source,name,targets in gamal_zlameh_rules:
+ fea.append("feature calt { sub ["+' '.join(targets)+"] "+source+"' by "+name+"; } calt;")
 
 for name,src,dx,dy,targets in single_dot_rules:
  fea.append("feature calt { sub ["+' '.join(targets)+"] "+src+"' by "+name+"; } calt;")
@@ -310,6 +334,10 @@ fea.append("feature calt { sub [uni0717 uni0717.init uni0717.medi uni0717.fina] 
 
 # Meem's combining dot below uses the approved fuller Rukakha outline.
 fea.append("feature calt { sub [uni0721 uni0721.init uni0721.medi uni0721.fina] uni0323' by rukakha.beth; } calt;")
+
+# Detached Kap: preserve typed Unicode while positioning legacy-compatible dots
+# inside the curve using the same optical glyph as Syriac Rukakha.
+fea.append("feature calt { sub uni071F [uni073C uni0323]' by rukakha.kaph.detached; } calt;")
 
 # Approved ligature mark placement applies in automatic mode as well.
 fea.append("feature calt { sub taw.alaph.alt1 [uni0742 rukakha.taw rukakha.taw.alaph.alt2]' by rukakha.taw; sub taw.alaph.alt2 [uni0742 rukakha.taw rukakha.taw.alaph.alt2]' by rukakha.taw.alaph.alt2; sub taw.alaph.alt1 [uni0308 seyame.taw.alaph seyame.taw.alaph.alt2]' by seyame.taw.alaph; sub taw.alaph.alt2 [uni0308 seyame.taw.alaph seyame.taw.alaph.alt2]' by seyame.taw.alaph.alt2; sub taw.alaph.alt1 [uni0735 zqapha.taw.alaph zqapha.taw.alaph.alt2]' by zqapha.taw.alaph; sub taw.alaph.alt2 [uni0735 zqapha.taw.alaph zqapha.taw.alaph.alt2]' by zqapha.taw.alaph.alt2; sub taw.alaph.alt1 [uni0732 pthaha.taw.alaph pthaha.taw.alaph.alt2]' by pthaha.taw.alaph; sub taw.alaph.alt2 [uni0732 pthaha.taw.alaph pthaha.taw.alaph.alt2]' by pthaha.taw.alaph.alt2; } calt;")
@@ -327,5 +355,5 @@ fea.append('} mark;');fea.append('feature mkmk {')
 for n,kind,cx,height in markinfo:
  if kind!='split':fea.append(f'pos mark {n} <anchor {cx} {height+70 if kind=="top" else -height-70}> mark @MC_{kind};')
 fea.append('} mkmk;')
-(out/'IshtarSyriacUnicodeAlpha.fea').write_text('\n'.join(fea));addOpenTypeFeaturesFromString(f,'\n'.join(fea));f['head'].fontRevision=0.001
-f.save(out/'IshtarSyriacUnicodeAlpha-Regular.ttf');(out/'mapping-provisional.json').write_text(json.dumps(mapping,indent=2));print('Built',len(cmap),'Unicode mappings;',len(old),'glyphs')
+(out/'IshtarSyriacUnicode.fea').write_text('\n'.join(fea));addOpenTypeFeaturesFromString(f,'\n'.join(fea));f['head'].fontRevision=1.000
+f.save(out/'IshtarSyriacUnicode-Regular.ttf');(out/'mapping-provisional.json').write_text(json.dumps(mapping,indent=2));print('Built',len(cmap),'Unicode mappings;',len(old),'glyphs')

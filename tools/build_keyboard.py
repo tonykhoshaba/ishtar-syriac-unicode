@@ -10,7 +10,7 @@ else:
 baseline=dict(m)
 additions={'A:KeyH':'ܗ̇','A:KeyR':'݂','A:KeyF':'̃'}
 assert all(k not in m for k in additions);m.update(additions)
-cmap=TTFont(R/'output/IshtarSyriacUnicodeAlpha-Regular.ttf').getBestCmap()
+cmap=TTFont(R/'output/IshtarSyriacUnicode-Regular.ttf').getBestCmap()
 rows=[]
 for k,v in m.items():
  rows.append({'key':k,'text':v,'unicode':' '.join(f'U+{ord(c):04X}' for c in v),'origin':'added' if k in additions else 'Ramsina editor','missing':' '.join(f'U+{ord(c):04X}' for c in v if ord(c) not in cmap)})

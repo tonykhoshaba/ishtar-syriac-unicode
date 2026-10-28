@@ -55,7 +55,7 @@
     "status": "provisional visual identification"
   },
   "0x720": {
-    "base": "l",
+    "base": "asciicircum",
     "connected": "l",
     "status": "provisional visual identification"
   },

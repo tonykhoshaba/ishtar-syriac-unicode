@@ -1,6 +1,6 @@
 # Ishtar Syriac Unicode — credits
 
-- **Esho Marcus / Dr. Isho Marcus** — historical type design, as identified in the Sparksoft source records.
+- **Esho Marcus** — historical type design, as identified in the Sparksoft source records.
 - **Sargon Hasso** — upstream OpenType development and the source/license clarification supplied to Tony.
 - **Sparksoft Systems** — upstream copyright holder and publisher of the Marcus font families under SIL OFL 1.1.
 - **Tony Khoshaba** — Ishtar letter modifications and vowel adjustments in 1998–1999, and the current reviewed Ishtar Unicode conversion, keyboard and mark-positioning work.

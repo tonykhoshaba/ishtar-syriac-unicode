@@ -1,30 +1,15 @@
-# Ishtar release checklist
+# Version 1 publication approval
 
-## Licensing — closed as a release blocker
+## Prepared for review
 
-- [x] Locate an explicit upstream license and preserve the source records.
-- [x] Record Sargon Hasso's clarification and Tony's decision to adopt the release basis.
-- [x] Adopt SIL OFL 1.1 for project font software and preserve credits/reserved names.
-- [x] Retain historical attribution notes without treating them as an ongoing permission wait.
+- [x] Version 1 README/introduction and memorial credits.
+- [x] SIL OFL 1.1 license and documented attribution/source basis.
+- [x] Stable family and filenames; internal font version 1.000 and keyboard version 1.0.0.
+- [x] Installation guide, keyboard reference, build guide and known limitations.
+- [x] Approved final Lamad and Gamal mark corrections included.
+- [x] Complete candidate artifact verification and checksums.
+- [x] Tony approved all public content, downloads and public publication on October 27, 2026.
+- [ ] Sync the approved snapshot to GitHub and verify it.
+- [ ] Make the repository public and create GitHub release v1.0.0, after approval.
 
-## Technical work — current focus
-
-- [x] Build desktop and phone/tablet Keyman packages.
-- [x] Verify all 122 compiled keyboard outputs against the reviewed mapping.
-- [x] Prepare Talqana/Seyame, below-mark and connected Gamal/Kaph review sheets.
-- [x] Generate all 12 Kokhva comparison pages with unchanged reviewed transcription.
-- [x] Verify 264 single-mark renders remain unchanged after combination work.
-- [ ] Collect Tony's Kokhva PDF appearance feedback and fix reproducible font defects.
-- [ ] Approve mixed vowels, Seyame, Talqana and below-mark combinations.
-- [ ] Collect iPhone and Windows tester feedback; complete Tony's Linux test.
-- [ ] Test Taw–Alaph automation and supported overrides in actual applications.
-- [ ] Resolve or clearly document remaining character-coverage gaps (currently 38 mapped outputs).
-- [ ] Finalize family/version metadata, release filenames and a keyboard reference/specimen.
-- [ ] Verify fresh TTF/WOFF2/KMP packages contain matching font builds and required notices.
-- [ ] Approve the finished public release, repository visibility and any website deployment.
-
-The font remains a review build. Public publication is a separate release action; this checklist does not itself change repository visibility or announce version 1.0.
-
-## After the stable release — Google Fonts / Google Docs
-
-- [ ] Prepare and request Ishtar's inclusion in Google Fonts, and explicitly request Google Docs/Workspace availability. Audit Google's current coverage, source/build and QA requirements first; search for duplicate proposals before submitting. Acceptance is not guaranteed. See [GOOGLE-FONTS-PLAN.md](GOOGLE-FONTS-PLAN.md). **Requested by Tony; recorded for later, not submitted.**
+Tony authorized public repository visibility and the v1.0.0 release on October 27, 2026. Future bug fixes and enhancements will receive new versions. Google Fonts/Docs submission remains a later task.

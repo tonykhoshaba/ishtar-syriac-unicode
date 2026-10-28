@@ -1,6 +1,6 @@
 {
   "phone": {
-    "font": "Ishtar Syriac Unicode Alpha",
+    "font": "Ishtar Syriac Unicode",
     "fontsize": "1em",
     "layer": [
       {
@@ -3058,7 +3058,7 @@
     ]
   },
   "tablet": {
-    "font": "Ishtar Syriac Unicode Alpha",
+    "font": "Ishtar Syriac Unicode",
     "fontsize": "1em",
     "layer": [
       {

@@ -1,28 +1,37 @@
-# Installation and platform status
+# Installation
 
-## Font versus keyboard
+## Windows
 
-Installing the font changes the available typeface. Installing a keyboard changes how keystrokes produce Unicode text. One does not install the other.
+Open `IshtarSyriacUnicode-Regular.ttf` and choose Install. Restart the application if needed, then select **Ishtar Syriac Unicode**. For typing, install Keyman from its official website and open `ishtar_syrc.kmp`. Use the English US physical-key positions with Shift and right Alt/AltGr.
 
-The same TTF file is intended for desktop applications on Windows, macOS and Linux. Platform/app interoperability still needs testing; only local browser and shaping-engine checks have been completed.
+## macOS
 
-- Windows: install the TTF through Windows Fonts, then select Ishtar in the application.
-- macOS: install using Font Book, then select Ishtar in the application.
-- Linux: use the desktop font installer or the user’s font directory and refresh the font cache as appropriate.
-- iPhone/iPad: font availability depends on font installation support and the target app. An installed keyboard cannot force the target application to use Ishtar.
-- Android: applications can bundle this font or expose compatible custom-font support. System-wide font replacement is not part of this package.
-- Web: serve the keyboard/static site with its adjacent `output/` font resources. Visitors do not need a desktop font installation.
+Open the TTF in Font Book and install it. Select **Ishtar Syriac Unicode** in the target application. For typing, install Keyman for macOS and the KMP package; Option/Alt behavior depends on the keyboard hardware and application.
 
-No native desktop keyboard installers or mobile touch keyboard packages are included yet. The included QWERTY keyboard runs inside the browser demo. Any already installed Syriac Unicode keyboard can also be used with the font, subject to its character coverage.
+## Linux
 
-## Taw–Alap
+Install the TTF using your desktop font installer, or place it in `~/.local/share/fonts/` and run `fc-cache -f`. Select the font in LibreOffice or another compatible application. Keyman for Linux uses IBus integration; follow the current official Keyman installation guide for your distribution.
 
-Type Taw then Alap. The font chooses the attached or detached design at word end from the joining context. In applications exposing the relevant OpenType features: ss01 forces the attached design, ss02 the detached design, and ss08 separate letters. The browser prototype exposes these as word-specific preview controls. Plain text cannot retain OpenType styling choices.
+## iPhone/iPad and Android
 
-## Sharing
+Install Keyman and open/share `ishtar_syrc.kmp` to Keyman. Enable its keyboard using the device's keyboard settings. Phone and tablet layouts are included. Touch: Shift gives alternate letters/digits; Alt gives extra marks; 123 opens punctuation; hold a key for alternatives.
 
-Recipients of Unicode text may see another Syriac font if their app does not use Ishtar. Use a properly generated PDF with embedded fonts when preserving appearance matters and the final font license permits embedding. The keyboard demo’s text export is plain text; its saved local preview formatting is not embedded in that export.
+The bundled font is intended for Keyman's editor and environments that support it. Installing a keyboard does not install Ishtar into every mobile app. Messages, Notes, WhatsApp and other apps may use a different Syriac font. Native mobile installation and app behavior need more testing. The browser tester is the easiest way to inspect Ishtar on a phone without installation.
 
-## 2026-10-26 update: installable keyboard package
+Official downloads and help: [Keyman downloads](https://keyman.com/downloads/), [Keyman help](https://help.keyman.com/).
 
-The earlier browser-only status is superseded: `keyman/build/ishtar_syrc.kmp` now contains desktop files and phone/tablet touch layouts. See `keyman/PLATFORMS.md` for Windows, macOS, Linux, Android and iPhone/iPad installation. All 122 compiled key outputs are verified; installation and application testing on actual devices remains pending. Mobile font availability remains limited to Keyman and applications supporting custom fonts.
+## Web
+
+Use the WOFF2 with CSS `@font-face` and `direction: rtl` for Syriac text. The included `keyboard/` demo loads it directly. No operating-system font installation is needed. Keep Unicode text unchanged; avoid converting it to the old Ishtar ASCII encoding.
+
+## Upgrading from the review build
+
+Select **Ishtar Syriac Unicode** in your documents. Refresh web pages after a font update; a hard refresh may be needed if a browser retains an older copy. The keyboard ID stays `ishtar_syrc`, with its version advanced to 1.0.0.
+
+## Taw–Alap alternatives
+
+Type Taw then Alap. The font selects the word-final design from the joining context. Applications that expose OpenType stylistic sets can use `ss01` for the attached design, `ss02` for the detached design and `ss08` for separate letters. The browser demo offers word-specific preview controls. Plain-text files do not preserve font-feature choices.
+
+## Sharing documents
+
+Other readers need Ishtar selected in their application to see its exact shapes. Use a PDF with the font embedded when appearance must be preserved. A plain-text export carries Unicode characters, not the font or its layout settings.

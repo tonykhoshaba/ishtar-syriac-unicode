@@ -1,5 +1,5 @@
 {
-  "baseline_source": "Existing Ramsina QWERTY review-editor layout",
+  "baseline_source": "Reviewed Ramsina-compatible QWERTY layout",
   "sha256": "9dc1987d60129638e516b06d148efcb2053e4e1f76bd2f89d7a9864e880553cd",
   "baseline_keys": 119,
   "changed_existing_keys": [],
